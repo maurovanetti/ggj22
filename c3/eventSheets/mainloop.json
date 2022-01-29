@@ -3,6 +3,46 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "BoardLeft",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 615249917505198
+		},
+		{
+			"eventType": "variable",
+			"name": "BoardRight",
+			"type": "number",
+			"initialValue": "6",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 225338749414197
+		},
+		{
+			"eventType": "variable",
+			"name": "BoardTop",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 741716263116250
+		},
+		{
+			"eventType": "variable",
+			"name": "BoardBottom",
+			"type": "number",
+			"initialValue": "7",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 475272956770080
+		},
+		{
+			"eventType": "variable",
 			"name": "CenterX",
 			"type": "number",
 			"initialValue": "0",

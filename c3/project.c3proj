@@ -37,6 +37,14 @@
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "TileMovement",
+			"name": "Tile movement",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "iwiq3boiai2",
@@ -48,7 +56,8 @@
 			"Mouse",
 			"Mat",
 			"TokenSocket",
-			"Log"
+			"Log",
+			"Carrot"
 		],
 		"subfolders": []
 	},
@@ -56,7 +65,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Token"
+			"Token",
+			"Pawn"
 		],
 		"subfolders": []
 	},

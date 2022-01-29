@@ -1,0 +1,17 @@
+{
+	"name": "Pawn",
+	"plugin-id": "Sprite",
+	"sid": 196085472012329,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "TileMovement",
+			"name": "TileMovement",
+			"sid": 669544550340605
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Carrot"
+	]
+}
