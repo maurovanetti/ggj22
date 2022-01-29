@@ -21,6 +21,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 716519117672003
+		},
+		{
+			"name": "LastFrozenY",
+			"type": "number",
+			"desc": "",
+			"sid": 988940643358698
 		}
 	],
 	"behaviorTypes": [],

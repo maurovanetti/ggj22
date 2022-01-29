@@ -1,7 +1,7 @@
 {
-	"name": "♥Token",
+	"name": "♦Token",
 	"plugin-id": "Sprite",
-	"sid": 956435585170719,
+	"sid": 817609166053742,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,7 +18,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6999025,
+						"imageSpriteId": 1714212,
 						"collisionPoly": {
 							"points": [
 								0.1796875,
@@ -43,7 +43,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 307342037780589,
+				"sid": 468883118877088,
 				"name": "Black",
 				"isLooping": false,
 				"isPingPong": false,
@@ -61,7 +61,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6842120,
+						"imageSpriteId": 1342343,
 						"collisionPoly": {
 							"points": [
 								0.1796875,
@@ -86,7 +86,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 500143374310874,
+				"sid": 204631172243386,
 				"name": "White",
 				"isLooping": false,
 				"isPingPong": false,

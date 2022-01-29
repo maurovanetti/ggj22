@@ -60,7 +60,10 @@
 			"Carrot",
 			"SmallRabbit",
 			"BigRabbit",
-			"DebugLabel"
+			"DebugLabel",
+			"♦Token",
+			"♠Token",
+			"Go"
 		],
 		"subfolders": []
 	},
