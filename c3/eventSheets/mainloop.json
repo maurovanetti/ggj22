@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet 1",
+	"name": "MainLoop",
 	"events": [
 		{
 			"eventType": "variable",
@@ -46,7 +46,143 @@
 							}
 						}
 					],
-					"sid": 803571646485178
+					"sid": 803571646485178,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 401377352767576,
+									"parameters": {
+										"object": "Mat"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 556221519019480,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 678374477945871,
+											"parameters": {
+												"object-to-create": "TokenSocket",
+												"layer": "\"Mats\"",
+												"x": "Mat.X",
+												"y": "Mat.Y - (Mat.Height * 0.25)",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "Mat",
+											"sid": 310636690803574,
+											"parameters": {
+												"child": "TokenSocket",
+												"transform-x": true,
+												"transform-y": true,
+												"transform-w": true,
+												"transform-h": true,
+												"transform-a": true,
+												"transform-z-elevation": true,
+												"destroy-with-parent": true
+											}
+										},
+										{
+											"id": "move-to-top",
+											"objectClass": "TokenSocket",
+											"sid": 227906441138011
+										}
+									],
+									"sid": 463838209741997
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 990427075130431,
+											"parameters": {
+												"object-to-create": "TokenSocket",
+												"layer": "\"Mats\"",
+												"x": "Mat.X",
+												"y": "Mat.Y - (Mat.Height * 0.50)",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "Mat",
+											"sid": 967767672132638,
+											"parameters": {
+												"child": "TokenSocket",
+												"transform-x": true,
+												"transform-y": true,
+												"transform-w": true,
+												"transform-h": true,
+												"transform-a": true,
+												"transform-z-elevation": true,
+												"destroy-with-parent": true
+											}
+										},
+										{
+											"id": "move-to-top",
+											"objectClass": "TokenSocket",
+											"sid": 971804160999319
+										}
+									],
+									"sid": 647782168820977
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 624416091452805,
+											"parameters": {
+												"object-to-create": "TokenSocket",
+												"layer": "\"Mats\"",
+												"x": "Mat.X",
+												"y": "Mat.Y - (Mat.Height * 0.75)",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "add-child",
+											"objectClass": "Mat",
+											"sid": 945348265584974,
+											"parameters": {
+												"child": "TokenSocket",
+												"transform-x": true,
+												"transform-y": true,
+												"transform-w": true,
+												"transform-h": true,
+												"transform-a": true,
+												"transform-z-elevation": true,
+												"destroy-with-parent": true
+											}
+										},
+										{
+											"id": "move-to-top",
+											"objectClass": "TokenSocket",
+											"sid": 805470867946351
+										}
+									],
+									"sid": 845118104566735
+								}
+							]
+						}
+					]
 				}
 			],
 			"sid": 589289488241941
@@ -324,6 +460,153 @@
 				}
 			],
 			"sid": 803974483123653
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Snap to Mats",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "SequenceIndex",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 988851820982325
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 911372438589818,
+							"parameters": {
+								"variable": "ActiveTokenPairUID",
+								"comparison": 2,
+								"value": "0"
+							}
+						},
+						{
+							"id": "for-each-ordered",
+							"objectClass": "System",
+							"sid": 636338663164726,
+							"parameters": {
+								"object": "TokenPair",
+								"expression": "TokenPair.Y",
+								"order": "descending"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 838854690557892,
+							"parameters": {
+								"variable": "SequenceIndex",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 260912318061861,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 736606612439549,
+									"parameters": {
+										"object": "Mat"
+									}
+								},
+								{
+									"id": "pick-nth-child",
+									"objectClass": "Mat",
+									"sid": 449952399120247,
+									"parameters": {
+										"child": "TokenSocket",
+										"instance": "SequenceIndex"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "TokenPair",
+									"sid": 784221106567540,
+									"parameters": {
+										"y": "TokenSocket.Y"
+									}
+								}
+							],
+							"sid": 718110325378750,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-children",
+											"objectClass": "TokenPair",
+											"sid": 636842335808442,
+											"parameters": {
+												"child": "Token",
+												"which": "own"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "Token",
+											"sid": 987466969411311,
+											"parameters": {
+												"y": "TokenSocket.Y"
+											}
+										}
+									],
+									"sid": 941147276298429,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-nearestfurthest",
+													"objectClass": "Token",
+													"sid": 755125753994829,
+													"parameters": {
+														"which": "nearest",
+														"x": "TokenSocket.X",
+														"y": "TokenSocket.Y"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-x",
+													"objectClass": "Token",
+													"sid": 671087397008597,
+													"parameters": {
+														"x": "TokenSocket.X"
+													}
+												}
+											],
+											"sid": 683172841523456
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 256829933913585
 		},
 		{
 			"eventType": "group",

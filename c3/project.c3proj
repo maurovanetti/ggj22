@@ -21,6 +21,22 @@
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "iwiq3boiai2",
@@ -29,7 +45,10 @@
 			"♥Token",
 			"♣Token",
 			"TokenPair",
-			"Mouse"
+			"Mouse",
+			"Mat",
+			"TokenSocket",
+			"Log"
 		],
 		"subfolders": []
 	},
@@ -43,13 +62,14 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Level"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"MainLoop",
+			"Debug"
 		],
 		"subfolders": []
 	},

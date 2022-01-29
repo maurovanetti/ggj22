@@ -1,0 +1,127 @@
+{
+	"name": "Debug",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "LogLines",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 956996570382268
+		},
+		{
+			"eventType": "variable",
+			"name": "LastLogMessage",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 570197301512492
+		},
+		{
+			"functionName": "Log",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "Message",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 642908745355307
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 228855662879281,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 672406513471527,
+							"parameters": {
+								"variable": "Message",
+								"comparison": 1,
+								"value": "LastLogMessage"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "append-text",
+							"objectClass": "Log",
+							"sid": 619252793025996,
+							"parameters": {
+								"text": "newline & Message"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 851097808802768,
+							"parameters": {
+								"variable": "LastLogMessage",
+								"value": "Message"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 902773990367114,
+							"parameters": {
+								"variable": "LogLines",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 790288089125340
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 903022958092143,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Log"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Log",
+					"sid": 802382359687484,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 665119485432389,
+					"parameters": {
+						"variable": "LastLogMessage",
+						"value": "\"\""
+					}
+				}
+			],
+			"sid": 507992636105191
+		}
+	],
+	"sid": 326254930301652
+}
