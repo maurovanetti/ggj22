@@ -59,7 +59,8 @@
 			"Log",
 			"Carrot",
 			"SmallRabbit",
-			"BigRabbit"
+			"BigRabbit",
+			"DebugLabel"
 		],
 		"subfolders": []
 	},

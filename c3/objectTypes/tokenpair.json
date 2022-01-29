@@ -15,6 +15,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 666121392398434
+		},
+		{
+			"name": "OffsetY",
+			"type": "number",
+			"desc": "",
+			"sid": 716519117672003
 		}
 	],
 	"behaviorTypes": [],

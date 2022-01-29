@@ -457,6 +457,11 @@
 										"instance-variable": "Frozen",
 										"value": "false"
 									}
+								},
+								{
+									"id": "move-to-top",
+									"objectClass": "Token",
+									"sid": 996109552902842
 								}
 							],
 							"sid": 217478924661219,
@@ -510,6 +515,16 @@
 			"children": [
 				{
 					"eventType": "variable",
+					"name": "StickyVerticalRange",
+					"type": "number",
+					"initialValue": "50",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": true,
+					"sid": 132509907688144
+				},
+				{
+					"eventType": "variable",
 					"name": "SequenceIndex",
 					"type": "number",
 					"initialValue": "-1",
@@ -517,6 +532,31 @@
 					"isStatic": false,
 					"isConstant": false,
 					"sid": 988851820982325
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TokenPair",
+							"sid": 704196183047804,
+							"parameters": {
+								"instance-variable": "Active"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "TokenPair",
+							"sid": 964993396268475,
+							"parameters": {
+								"instance-variable": "OffsetY",
+								"value": "TokenPair.Y -StickyVerticalRange"
+							}
+						}
+					],
+					"sid": 507177078267417
 				},
 				{
 					"eventType": "block",
@@ -534,10 +574,10 @@
 						{
 							"id": "for-each-ordered",
 							"objectClass": "System",
-							"sid": 636338663164726,
+							"sid": 232328218961392,
 							"parameters": {
 								"object": "TokenPair",
-								"expression": "TokenPair.Y",
+								"expression": "TokenPair.OffsetY",
 								"order": "descending"
 							}
 						}
@@ -583,6 +623,15 @@
 									"sid": 784221106567540,
 									"parameters": {
 										"y": "TokenSocket.Y"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "TokenPair",
+									"sid": 771395749749656,
+									"parameters": {
+										"instance-variable": "OffsetY",
+										"value": "TokenPair.Y"
 									}
 								}
 							],
