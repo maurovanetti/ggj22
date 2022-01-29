@@ -2,8 +2,21 @@
 	"name": "Rabbit",
 	"plugin-id": "Sprite",
 	"sid": 955449310467350,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "Small",
+			"type": "boolean",
+			"desc": "",
+			"sid": 258074954205249
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "TileMovement",
+			"name": "TileMovement",
+			"sid": 959799237588037
+		}
+	],
 	"effectTypes": [],
 	"members": [
 		"BigRabbit",

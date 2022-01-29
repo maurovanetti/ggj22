@@ -1918,7 +1918,9 @@
 						"live-preview": false
 					},
 					"uid": 58,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Small": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -1926,8 +1928,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 100,
-								"speed-y": 100,
+								"speed-x": 300,
+								"speed-y": 0,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -1990,7 +1992,9 @@
 						"live-preview": false
 					},
 					"uid": 57,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Small": true
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -1998,10 +2002,10 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 400,
-								"speed-y": 400,
-								"enabled": false,
-								"default-controls": true,
+								"speed-x": 300,
+								"speed-y": 0,
+								"enabled": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -2071,7 +2075,14 @@
 					},
 					"uid": 12,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
 					"world": {
 						"x": 63,
 						"y": 1332,
@@ -2104,7 +2115,14 @@
 					},
 					"uid": 13,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
 					"world": {
 						"x": 963,
 						"y": 1332,
@@ -2367,7 +2385,7 @@
 								}
 							},
 							{
-								"uid": 8,
+								"uid": 60,
 								"flags": {
 									"x": true,
 									"y": true,
@@ -2431,7 +2449,11 @@
 					"uid": 2,
 					"instanceVariables": {
 						"Active": false,
-						"Frozen": true
+						"Frozen": true,
+						"Movement": -1,
+						"Swap": false,
+						"Attack": false,
+						"MustResolve": false
 					},
 					"behaviors": {
 						"Sine": {
@@ -2513,7 +2535,11 @@
 					"uid": 3,
 					"instanceVariables": {
 						"Active": false,
-						"Frozen": true
+						"Frozen": true,
+						"Movement": 0,
+						"Swap": true,
+						"Attack": false,
+						"MustResolve": false
 					},
 					"behaviors": {
 						"Sine": {
@@ -2595,7 +2621,11 @@
 					"uid": 7,
 					"instanceVariables": {
 						"Active": false,
-						"Frozen": true
+						"Frozen": true,
+						"Movement": 0,
+						"Swap": true,
+						"Attack": false,
+						"MustResolve": false
 					},
 					"behaviors": {
 						"Sine": {
@@ -2677,7 +2707,11 @@
 					"uid": 10,
 					"instanceVariables": {
 						"Active": false,
-						"Frozen": true
+						"Frozen": true,
+						"Movement": 0,
+						"Swap": false,
+						"Attack": true,
+						"MustResolve": false
 					},
 					"behaviors": {
 						"Sine": {
@@ -2759,7 +2793,11 @@
 					"uid": 9,
 					"instanceVariables": {
 						"Active": false,
-						"Frozen": true
+						"Frozen": true,
+						"Movement": 1,
+						"Swap": false,
+						"Attack": false,
+						"MustResolve": false
 					},
 					"behaviors": {
 						"Sine": {
@@ -2830,7 +2868,7 @@
 					}
 				},
 				{
-					"type": "♦Token",
+					"type": "♠Token",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Black",
@@ -2838,10 +2876,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 8,
+					"uid": 60,
 					"instanceVariables": {
 						"Active": false,
-						"Frozen": true
+						"Frozen": true,
+						"Movement": 1,
+						"Swap": false,
+						"Attack": false,
+						"MustResolve": false
 					},
 					"behaviors": {
 						"Sine": {
@@ -2871,7 +2913,7 @@
 					},
 					"sceneGraphData": {
 						"parent-uid": 5,
-						"uid": 8,
+						"uid": 60,
 						"flags": {
 							"x": true,
 							"y": true,

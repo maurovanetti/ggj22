@@ -1311,12 +1311,12 @@
 							],
 							"actions": [
 								{
-									"id": "set-active",
+									"id": "set-boolean-instvar",
 									"objectClass": "Token",
-									"sid": 242034958137666,
-									"behaviorType": "Sine",
+									"sid": 421538112472784,
 									"parameters": {
-										"state": "active"
+										"instance-variable": "MustResolve",
+										"value": "true"
 									}
 								},
 								{
@@ -1351,59 +1351,294 @@
 					"isActiveOnStart": false,
 					"children": [
 						{
+							"eventType": "variable",
+							"name": "RabbitUID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 518755238760558
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-active",
-									"objectClass": "Token",
-									"sid": 818497269325470,
-									"behaviorType": "Sine"
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 962937287039545,
+									"parameters": {
+										"variable": "WhiteTurn"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Rabbit",
+									"sid": 919422449825677,
+									"parameters": {
+										"instance-variable": "Small"
+									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-group-active",
+									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 932812435338983,
+									"sid": 262127635194957,
 									"parameters": {
-										"group-name": "\"Resolve Token\"",
-										"state": "deactivated"
+										"variable": "RabbitUID",
+										"value": "Rabbit.UID"
+									}
+								}
+							],
+							"sid": 126033803657984
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 731188171038064,
+									"parameters": {
+										"variable": "WhiteTurn"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Rabbit",
+									"sid": 993715124855662,
+									"parameters": {
+										"instance-variable": "Small"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 775958778614204,
+									"parameters": {
+										"variable": "RabbitUID",
+										"value": "Rabbit.UID"
+									}
+								}
+							],
+							"sid": 432591988378314
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Token",
+									"sid": 476598927616932,
+									"parameters": {
+										"instance-variable": "MustResolve"
 									}
 								},
 								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 395377882500688,
+									"id": "pick-by-unique-id",
+									"objectClass": "Rabbit",
+									"sid": 740974709089663,
 									"parameters": {
-										"seconds": "2"
+										"unique-id": "RabbitUID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Token",
+									"sid": 348961494372408,
+									"parameters": {
+										"instance-variable": "MustResolve",
+										"value": "false"
 									}
 								},
 								{
 									"id": "set-active",
 									"objectClass": "Token",
-									"sid": 587727024160218,
+									"sid": 887908989662031,
 									"behaviorType": "Sine",
 									"parameters": {
-										"state": "inactive"
+										"state": "active"
 									}
+								}
+							],
+							"sid": 156221503226113,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Token",
+											"sid": 396004205406505,
+											"parameters": {
+												"instance-variable": "Movement",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "ResolveIn",
+											"sid": 551165148456696,
+											"parameters": [
+												"1"
+											]
+										}
+									],
+									"sid": 435049607863593
 								},
 								{
-									"id": "start-fade",
-									"objectClass": "Token",
-									"sid": 790602077659261,
-									"behaviorType": "Fade"
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 844791580750238
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "ResolveIn",
+											"sid": 242235958277321,
+											"parameters": [
+												"2"
+											]
+										}
+									],
+									"sid": 978582675126738,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Token",
+													"sid": 782049871257327,
+													"parameters": {
+														"instance-variable": "Movement",
+														"comparison": 0,
+														"value": "1"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 180958512052079,
+													"parameters": {
+														"first-value": "Rabbit.TileMovement.GridX",
+														"comparison": 2,
+														"second-value": "BoardRight"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "Rabbit",
+													"sid": 503834277703966,
+													"behaviorType": "TileMovement",
+													"parameters": {
+														"control": "right"
+													}
+												}
+											],
+											"sid": 363874027552686
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Token",
+													"sid": 114600349807696,
+													"parameters": {
+														"instance-variable": "Movement",
+														"comparison": 0,
+														"value": "-1"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 559599530879836,
+													"parameters": {
+														"first-value": "Rabbit.TileMovement.GridX",
+														"comparison": 4,
+														"second-value": "BoardLeft"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "Rabbit",
+													"sid": 153605441657965,
+													"behaviorType": "TileMovement",
+													"parameters": {
+														"control": "left"
+													}
+												}
+											],
+											"sid": 451424232431500
+										}
+									]
+								}
+							]
+						},
+						{
+							"functionName": "ResolveIn",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "Seconds",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 690147456094167
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 763078708162547,
+									"parameters": {
+										"seconds": "Seconds"
+									}
 								},
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 664066581511276,
+									"sid": 976515886846322,
 									"parameters": {
 										"group-name": "\"Advance to Next Token\"",
 										"state": "activated"
 									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 911931416051346,
+									"parameters": {
+										"group-name": "\"Resolve Token\"",
+										"state": "deactivated"
+									}
 								}
 							],
-							"sid": 156221503226113
+							"sid": 127505856155211
 						}
 					],
 					"sid": 793155243493462
@@ -1478,15 +1713,6 @@
 												"group-name": "\"Complete Resolution\"",
 												"state": "activated"
 											}
-										},
-										{
-											"id": "set-group-active",
-											"objectClass": "System",
-											"sid": 508753172096780,
-											"parameters": {
-												"group-name": "\"Advance to Next Token\"",
-												"state": "deactivated"
-											}
 										}
 									],
 									"sid": 447943404478927
@@ -1509,20 +1735,49 @@
 												"group-name": "\"Select Token\"",
 												"state": "activated"
 											}
-										},
-										{
-											"id": "set-group-active",
-											"objectClass": "System",
-											"sid": 118689620514187,
-											"parameters": {
-												"group-name": "\"Advance to Next Token\"",
-												"state": "deactivated"
-											}
 										}
 									],
 									"sid": 133956758152987
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-active",
+									"objectClass": "Token",
+									"sid": 196513112971987,
+									"behaviorType": "Sine"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 976339731059356,
+									"parameters": {
+										"group-name": "\"Advance to Next Token\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "Token",
+									"sid": 954975953633436,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "Token",
+									"sid": 513573692566596,
+									"behaviorType": "Fade"
+								}
+							],
+							"sid": 311595472163806
 						}
 					],
 					"sid": 719915895720748
