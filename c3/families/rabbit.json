@@ -1,0 +1,12 @@
+{
+	"name": "Rabbit",
+	"plugin-id": "Sprite",
+	"sid": 955449310467350,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"BigRabbit",
+		"SmallRabbit"
+	]
+}

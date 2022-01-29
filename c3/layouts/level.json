@@ -5,7 +5,51 @@
 			"name": "Canvas",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "BigRabbit",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 58,
+					"instanceVariables": {},
+					"behaviors": {
+						"TileMovement": {
+							"properties": {
+								"grid-width": 128,
+								"grid-height": 128,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 100,
+								"speed-y": 100,
+								"enabled": true,
+								"default-controls": false,
+								"isometric": false
+							}
+						}
+					},
+					"world": {
+						"x": 512,
+						"y": 1024,
+						"width": 256,
+						"height": 128,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 748172870060688,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -16,9 +60,9 @@
 				1
 			],
 			"backgroundColor": [
-				1,
-				1,
-				1,
+				0.4392156862745098,
+				0.9019607843137255,
+				0.8235294117647058,
 				1
 			],
 			"isTransparent": false,
@@ -123,7 +167,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -166,7 +210,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -209,7 +253,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -252,7 +296,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -295,7 +339,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -338,7 +382,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -381,7 +425,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -424,7 +468,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -467,7 +511,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -510,7 +554,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -553,7 +597,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -596,7 +640,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -639,7 +683,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -682,7 +726,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -725,7 +769,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -768,7 +812,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -811,7 +855,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -854,7 +898,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -897,7 +941,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -940,7 +984,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -983,7 +1027,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1026,7 +1070,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1069,7 +1113,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1112,7 +1156,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1155,7 +1199,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1198,7 +1242,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1241,7 +1285,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1284,7 +1328,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1327,7 +1371,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1370,7 +1414,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1413,7 +1457,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1456,7 +1500,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1499,7 +1543,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1542,7 +1586,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1585,7 +1629,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1628,7 +1672,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1671,7 +1715,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1714,7 +1758,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1757,7 +1801,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1800,7 +1844,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1843,7 +1887,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1886,7 +1930,7 @@
 								"speed-x": 100,
 								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
+								"default-controls": false,
 								"isometric": false
 							}
 						}
@@ -1895,6 +1939,49 @@
 						"x": 768,
 						"y": 128,
 						"width": 129,
+						"height": 128,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SmallRabbit",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 57,
+					"instanceVariables": {},
+					"behaviors": {
+						"TileMovement": {
+							"properties": {
+								"grid-width": 128,
+								"grid-height": 128,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 400,
+								"speed-y": 400,
+								"enabled": true,
+								"default-controls": true,
+								"isometric": false
+							}
+						}
+					},
+					"world": {
+						"x": 256,
+						"y": 1024,
+						"width": 128,
 						"height": 128,
 						"originX": 0,
 						"originY": 0,

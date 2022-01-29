@@ -57,7 +57,9 @@
 			"Mat",
 			"TokenSocket",
 			"Log",
-			"Carrot"
+			"Carrot",
+			"SmallRabbit",
+			"BigRabbit"
 		],
 		"subfolders": []
 	},
@@ -66,7 +68,8 @@
 	"families": {
 		"items": [
 			"Token",
-			"Pawn"
+			"Pawn",
+			"Rabbit"
 		],
 		"subfolders": []
 	},
