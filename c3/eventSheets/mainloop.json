@@ -1361,6 +1361,16 @@
 							"sid": 518755238760558
 						},
 						{
+							"eventType": "variable",
+							"name": "DeltaTiles",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "BlackRabbit - WhiteRabbit",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 196669731586489
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -1427,6 +1437,22 @@
 								}
 							],
 							"sid": 432591988378314
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 580315713309710,
+									"parameters": {
+										"variable": "DeltaTiles",
+										"value": "BigRabbit.TileMovement.GridX - SmallRabbit.TileMovement.GridX "
+									}
+								}
+							],
+							"sid": 710685713255090
 						},
 						{
 							"eventType": "block",
@@ -1541,16 +1567,101 @@
 											],
 											"actions": [
 												{
-													"id": "simulate-control",
-													"objectClass": "Rabbit",
-													"sid": 503834277703966,
-													"behaviorType": "TileMovement",
-													"parameters": {
-														"control": "right"
-													}
+													"callFunction": "Log",
+													"sid": 779439702871338,
+													"parameters": [
+														"str(DeltaTiles) & \", \" & str(Rabbit.TileMovement.GridX)"
+													]
 												}
 											],
-											"sid": 363874027552686
+											"sid": 363874027552686,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 783650487353853,
+															"parameters": {
+																"variable": "WhiteTurn"
+															},
+															"isInverted": true
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 118019684946599,
+															"parameters": {
+																"first-value": "DeltaTiles",
+																"comparison": 0,
+																"second-value": "-2"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 662793108891540,
+															"parameters": {
+																"first-value": "BigRabbit.TileMovement.GridX",
+																"comparison": 2,
+																"second-value": "BoardRight - 1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "simulate-control",
+															"objectClass": "BigRabbit",
+															"sid": 162485547331646,
+															"behaviorType": "TileMovement",
+															"parameters": {
+																"control": "right"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 901641996927613,
+															"parameters": {
+																"seconds": "0.2"
+															}
+														},
+														{
+															"id": "simulate-control",
+															"objectClass": "SmallRabbit",
+															"sid": 789485170032715,
+															"behaviorType": "TileMovement",
+															"parameters": {
+																"control": "right"
+															}
+														}
+													],
+													"sid": 423106615744359
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 377475488052175
+														}
+													],
+													"actions": [
+														{
+															"id": "simulate-control",
+															"objectClass": "Rabbit",
+															"sid": 155261631559534,
+															"behaviorType": "TileMovement",
+															"parameters": {
+																"control": "right"
+															}
+														}
+													],
+													"sid": 968003115757148
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -1576,18 +1687,95 @@
 													}
 												}
 											],
-											"actions": [
+											"actions": [],
+											"sid": 451424232431500,
+											"children": [
 												{
-													"id": "simulate-control",
-													"objectClass": "Rabbit",
-													"sid": 153605441657965,
-													"behaviorType": "TileMovement",
-													"parameters": {
-														"control": "left"
-													}
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 444412714182131,
+															"parameters": {
+																"variable": "WhiteTurn"
+															},
+															"isInverted": true
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 792789930269561,
+															"parameters": {
+																"first-value": "DeltaTiles",
+																"comparison": 0,
+																"second-value": "1"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 941410817136978,
+															"parameters": {
+																"first-value": "BigRabbit.TileMovement.GridX",
+																"comparison": 4,
+																"second-value": "BoardLeft + 1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "simulate-control",
+															"objectClass": "BigRabbit",
+															"sid": 647340919576784,
+															"behaviorType": "TileMovement",
+															"parameters": {
+																"control": "left"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 439945344864015,
+															"parameters": {
+																"seconds": "0.2"
+															}
+														},
+														{
+															"id": "simulate-control",
+															"objectClass": "SmallRabbit",
+															"sid": 904438282302638,
+															"behaviorType": "TileMovement",
+															"parameters": {
+																"control": "left"
+															}
+														}
+													],
+													"sid": 402785435010551
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 743021027897468
+														}
+													],
+													"actions": [
+														{
+															"id": "simulate-control",
+															"objectClass": "Rabbit",
+															"sid": 239431248647865,
+															"behaviorType": "TileMovement",
+															"parameters": {
+																"control": "left"
+															}
+														}
+													],
+													"sid": 835794963904068
 												}
-											],
-											"sid": 451424232431500
+											]
 										}
 									]
 								}
