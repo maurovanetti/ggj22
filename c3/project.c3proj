@@ -5,16 +5,40 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		}
+	],
 	"uniqueId": "iwiq3boiai2",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"♥Token",
+			"♣Token",
+			"TokenPair",
+			"Mouse"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Token"
+		],
 		"subfolders": []
 	},
 	"layouts": {

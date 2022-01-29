@@ -1,5 +1,452 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "CenterX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 983207427252198
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Initialization",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 954022135319830
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 529012233626810,
+							"parameters": {
+								"variable": "CenterX",
+								"value": "ViewportWidth(0) / 2"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "TokenPair",
+							"sid": 105690998308485,
+							"parameters": {
+								"x": "CenterX"
+							}
+						}
+					],
+					"sid": 803571646485178
+				}
+			],
+			"sid": 589289488241941
+		},
+		{
+			"eventType": "variable",
+			"name": "ActiveTokenUID",
+			"type": "number",
+			"initialValue": "-1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 858950568780222
+		},
+		{
+			"eventType": "variable",
+			"name": "ActiveTokenPairUID",
+			"type": "number",
+			"initialValue": "-1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 872284439199793
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Token Drag & Drop",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 245172742314416,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Token"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 275059023202460,
+							"parameters": {
+								"variable": "ActiveTokenUID",
+								"value": "Token.UID"
+							}
+						}
+					],
+					"sid": 539093471451175,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-parent",
+									"objectClass": "Token",
+									"sid": 618308932012116,
+									"parameters": {
+										"parent": "TokenPair",
+										"which": "own"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 895159614959253,
+									"parameters": {
+										"variable": "ActiveTokenPairUID",
+										"value": "TokenPair.UID"
+									}
+								}
+							],
+							"sid": 165378014152919
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Mouse",
+							"sid": 465459564986829,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 793851318669304,
+							"parameters": {
+								"variable": "ActiveTokenUID",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 819044789976354,
+							"parameters": {
+								"variable": "ActiveTokenPairUID",
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 325530737738370
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 121801668863244,
+							"parameters": {
+								"object": "Token"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Token",
+							"sid": 694955339674549,
+							"parameters": {
+								"instance-variable": "Frozen",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Token",
+							"sid": 204155824747484,
+							"parameters": {
+								"instance-variable": "Active",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Token",
+							"sid": 257622880813164,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 704865747009245
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 884786236450871,
+							"parameters": {
+								"object": "TokenPair"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "TokenPair",
+							"sid": 245245892676404,
+							"parameters": {
+								"instance-variable": "Active",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 974195654876317
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "TokenPair",
+							"sid": 553801361790351,
+							"parameters": {
+								"unique-id": "ActiveTokenPairUID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "TokenPair",
+							"sid": 209026241461887,
+							"parameters": {
+								"instance-variable": "Active",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 410901255023909,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-children",
+									"objectClass": "TokenPair",
+									"sid": 603026476881167,
+									"parameters": {
+										"child": "Token",
+										"which": "own"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Token",
+									"sid": 906832180027845,
+									"parameters": {
+										"instance-variable": "Frozen",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 217478924661219,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Token",
+											"sid": 502951486036808,
+											"parameters": {
+												"unique-id": "ActiveTokenUID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Token",
+											"sid": 892465873479174,
+											"parameters": {
+												"instance-variable": "Active",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-opacity",
+											"objectClass": "Token",
+											"sid": 860474491390888,
+											"parameters": {
+												"opacity": "100"
+											}
+										}
+									],
+									"sid": 682090259907734
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 803974483123653
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Token Pair Sync",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "PassiveTokenOpacity",
+					"type": "number",
+					"initialValue": "60",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": true,
+					"sid": 308489823754973
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Token",
+							"sid": 321492488027099,
+							"parameters": {
+								"instance-variable": "Active"
+							}
+						},
+						{
+							"id": "pick-parent",
+							"objectClass": "Token",
+							"sid": 932840010887111,
+							"parameters": {
+								"parent": "TokenPair",
+								"which": "own"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Token",
+							"sid": 801769993874593,
+							"parameters": {
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "TokenPair",
+							"sid": 681552838342462,
+							"parameters": {
+								"y": "Token.Y"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "TokenPair",
+							"sid": 321307024644383,
+							"parameters": {
+								"instance-variable": "DeltaX",
+								"value": "Token.X - CenterX"
+							}
+						}
+					],
+					"sid": 741329706223637
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "TokenPair",
+							"sid": 513979129995972,
+							"parameters": {
+								"unique-id": "ActiveTokenPairUID"
+							}
+						},
+						{
+							"id": "pick-children",
+							"objectClass": "TokenPair",
+							"sid": 343299346118684,
+							"parameters": {
+								"child": "Token",
+								"which": "own"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Token",
+							"sid": 381820783729732,
+							"parameters": {
+								"instance-variable": "Active"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Token",
+							"sid": 904147026832978,
+							"parameters": {
+								"x": "CenterX - TokenPair.DeltaX",
+								"y": "TokenPair.Y"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Token",
+							"sid": 897680782951606,
+							"parameters": {
+								"opacity": "PassiveTokenOpacity"
+							}
+						}
+					],
+					"sid": 484626770203919
+				}
+			],
+			"sid": 239744323697153
+		}
+	],
 	"sid": 912314645175753
 }

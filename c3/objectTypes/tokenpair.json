@@ -1,0 +1,50 @@
+{
+	"name": "TokenPair",
+	"plugin-id": "Sprite",
+	"sid": 946627101700976,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "DeltaX",
+			"type": "number",
+			"desc": "",
+			"sid": 234976149236245
+		},
+		{
+			"name": "Active",
+			"type": "boolean",
+			"desc": "",
+			"sid": 666121392398434
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6716945,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 261389938593637,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
