@@ -873,6 +873,15 @@
 												"instance-variable": "LastFrozenY",
 												"value": "TokenPair.Y"
 											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "TokenPair",
+											"sid": 151730179050773,
+											"parameters": {
+												"instance-variable": "SequenceIndex",
+												"value": "SequenceIndex"
+											}
 										}
 									],
 									"sid": 208128162714814,
@@ -1058,9 +1067,536 @@
 						}
 					],
 					"sid": 123651593324299
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Go",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 894142241570551,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "Go"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 723988433229534,
+									"parameters": {
+										"group-name": "\"Resolution\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 412293446708916,
+									"parameters": {
+										"group-name": "\"Initiate Resolution\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 532953612070544,
+									"parameters": {
+										"group-name": "\"Plan\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Go",
+									"sid": 626904911283670,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 161602445921087
+						}
+					],
+					"sid": 501929634043686
 				}
 			],
 			"sid": 368686063653739
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Resolution",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "WhiteTurn",
+					"type": "boolean",
+					"initialValue": "true",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 710046734939252
+				},
+				{
+					"eventType": "variable",
+					"name": "SequenceIndex",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 373618890789162
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Initiate Resolution",
+					"description": "",
+					"isActiveOnStart": false,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 483585654094780,
+									"parameters": {
+										"variable": "WhiteTurn",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 706804558106923,
+									"parameters": {
+										"variable": "SequenceIndex",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 163383755716041,
+									"parameters": {
+										"group-name": "\"Select Token\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 308748202895576,
+									"parameters": {
+										"group-name": "\"Initiate Resolution\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 531065635304407
+						}
+					],
+					"sid": 985398315085194
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Select Token",
+					"description": "",
+					"isActiveOnStart": false,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "TurnColor",
+							"type": "string",
+							"initialValue": "",
+							"comment": "\"White\" or \"Black\" (like Token's animation name)",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 555398330259715
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 318707587660994,
+									"parameters": {
+										"variable": "WhiteTurn"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 503295860625923,
+									"parameters": {
+										"variable": "TurnColor",
+										"value": "\"White\""
+									}
+								}
+							],
+							"sid": 339681281559772
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 755916137348073
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 931237545653433,
+									"parameters": {
+										"variable": "TurnColor",
+										"value": "\"Black\""
+									}
+								}
+							],
+							"sid": 308183039853533
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "TokenPair",
+									"sid": 693878805407525,
+									"parameters": {
+										"instance-variable": "SequenceIndex",
+										"comparison": 0,
+										"value": "SequenceIndex"
+									}
+								},
+								{
+									"id": "pick-children",
+									"objectClass": "TokenPair",
+									"sid": 848813321927528,
+									"parameters": {
+										"child": "Token",
+										"which": "own"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Token",
+									"sid": 397829920979781,
+									"parameters": {
+										"animation": "TurnColor"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-active",
+									"objectClass": "Token",
+									"sid": 242034958137666,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "active"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 337277185815905,
+									"parameters": {
+										"group-name": "\"Resolve Token\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 886985908887274,
+									"parameters": {
+										"group-name": "\"Select Token\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 833456597900129
+						}
+					],
+					"sid": 438709445724123
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Resolve Token",
+					"description": "",
+					"isActiveOnStart": false,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-active",
+									"objectClass": "Token",
+									"sid": 818497269325470,
+									"behaviorType": "Sine"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 932812435338983,
+									"parameters": {
+										"group-name": "\"Resolve Token\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 395377882500688,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "Token",
+									"sid": 587727024160218,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "Token",
+									"sid": 790602077659261,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 664066581511276,
+									"parameters": {
+										"group-name": "\"Advance to Next Token\"",
+										"state": "activated"
+									}
+								}
+							],
+							"sid": 156221503226113
+						}
+					],
+					"sid": 793155243493462
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Advance to Next Token",
+					"description": "",
+					"isActiveOnStart": false,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "toggle-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 466182966292001,
+									"parameters": {
+										"variable": "WhiteTurn"
+									}
+								}
+							],
+							"sid": 619377566946189,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 157385639841480,
+											"parameters": {
+												"variable": "WhiteTurn"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 681167636954452,
+											"parameters": {
+												"variable": "SequenceIndex",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 586044378026776
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 993185613335548,
+											"parameters": {
+												"variable": "SequenceIndex",
+												"comparison": 5,
+												"value": "TokenPair.Count"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 721463642855793,
+											"parameters": {
+												"group-name": "\"Complete Resolution\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 508753172096780,
+											"parameters": {
+												"group-name": "\"Advance to Next Token\"",
+												"state": "deactivated"
+											}
+										}
+									],
+									"sid": 447943404478927
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 576784957430302
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 870576600374615,
+											"parameters": {
+												"group-name": "\"Select Token\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 118689620514187,
+											"parameters": {
+												"group-name": "\"Advance to Next Token\"",
+												"state": "deactivated"
+											}
+										}
+									],
+									"sid": 133956758152987
+								}
+							]
+						}
+					],
+					"sid": 719915895720748
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Complete Resolution",
+					"description": "",
+					"isActiveOnStart": false,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 588543439774346,
+									"parameters": {
+										"group-name": "\"Plan\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 447363014174947,
+									"parameters": {
+										"group-name": "\"Complete Resolution\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 815818151397969,
+									"parameters": {
+										"group-name": "\"Resolution\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 955173684255465,
+									"parameters": {
+										"seconds": "1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Token",
+									"sid": 425005301693455,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Go",
+									"sid": 633074927530895,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 266054266821149
+						}
+					],
+					"sid": 874158367781036
+				}
+			],
+			"sid": 640630344879882
 		}
 	],
 	"sid": 912314645175753

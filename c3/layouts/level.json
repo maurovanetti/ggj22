@@ -1909,49 +1909,6 @@
 					}
 				},
 				{
-					"type": "SmallRabbit",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Idle",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 57,
-					"instanceVariables": {},
-					"behaviors": {
-						"TileMovement": {
-							"properties": {
-								"grid-width": 128,
-								"grid-height": 128,
-								"grid-offset-x": 0,
-								"grid-offset-y": 0,
-								"speed-x": 400,
-								"speed-y": 400,
-								"enabled": false,
-								"default-controls": true,
-								"isometric": false
-							}
-						}
-					},
-					"world": {
-						"x": 256,
-						"y": 1024,
-						"width": 128,
-						"height": 128,
-						"originX": 0,
-						"originY": -0.46875,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "BigRabbit",
 					"properties": {
 						"initially-visible": true,
@@ -2013,6 +1970,49 @@
 						"height": 50,
 						"originX": 0.5,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SmallRabbit",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 57,
+					"instanceVariables": {},
+					"behaviors": {
+						"TileMovement": {
+							"properties": {
+								"grid-width": 128,
+								"grid-height": 128,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 400,
+								"speed-y": 400,
+								"enabled": false,
+								"default-controls": true,
+								"isometric": false
+							}
+						}
+					},
+					"world": {
+						"x": 384,
+						"y": 1024,
+						"width": 128,
+						"height": 128,
+						"originX": 0,
+						"originY": -0.46875,
 						"color": [
 							1,
 							1,
@@ -2169,7 +2169,8 @@
 						"DeltaX": 0,
 						"Active": false,
 						"OffsetY": 0,
-						"LastFrozenY": 0
+						"LastFrozenY": 0,
+						"SequenceIndex": -1
 					},
 					"behaviors": {},
 					"sceneGraphData": {
@@ -2227,7 +2228,7 @@
 					},
 					"world": {
 						"x": 512,
-						"y": 256,
+						"y": 1024,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -2256,7 +2257,8 @@
 						"DeltaX": 0,
 						"Active": false,
 						"OffsetY": 0,
-						"LastFrozenY": 0
+						"LastFrozenY": 0,
+						"SequenceIndex": -1
 					},
 					"behaviors": {},
 					"sceneGraphData": {
@@ -2314,7 +2316,7 @@
 					},
 					"world": {
 						"x": 512,
-						"y": 128,
+						"y": 896,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -2343,7 +2345,8 @@
 						"DeltaX": 0,
 						"Active": false,
 						"OffsetY": 0,
-						"LastFrozenY": 0
+						"LastFrozenY": 0,
+						"SequenceIndex": -1
 					},
 					"behaviors": {},
 					"sceneGraphData": {
@@ -2401,7 +2404,7 @@
 					},
 					"world": {
 						"x": 512,
-						"y": 0,
+						"y": 768,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -2430,7 +2433,32 @@
 						"Active": false,
 						"Frozen": true
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 0.7,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 20,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 4,
 						"uid": 2,
@@ -2457,8 +2485,8 @@
 						}
 					},
 					"world": {
-						"x": 256,
-						"y": 256,
+						"x": 0,
+						"y": 1024,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -2487,7 +2515,32 @@
 						"Active": false,
 						"Frozen": true
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 0.7,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 20,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 4,
 						"uid": 3,
@@ -2514,8 +2567,8 @@
 						}
 					},
 					"world": {
-						"x": 768,
-						"y": 256,
+						"x": 1024,
+						"y": 1024,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -2544,7 +2597,32 @@
 						"Active": false,
 						"Frozen": true
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 0.7,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 20,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 5,
 						"uid": 7,
@@ -2571,8 +2649,8 @@
 						}
 					},
 					"world": {
-						"x": 256,
-						"y": 0,
+						"x": 0,
+						"y": 768,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -2601,7 +2679,32 @@
 						"Active": false,
 						"Frozen": true
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 0.7,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 20,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 11,
 						"uid": 10,
@@ -2628,8 +2731,8 @@
 						}
 					},
 					"world": {
-						"x": 768,
-						"y": 128,
+						"x": 1024,
+						"y": 896,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -2658,7 +2761,32 @@
 						"Active": false,
 						"Frozen": true
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 0.7,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 20,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 11,
 						"uid": 9,
@@ -2685,8 +2813,8 @@
 						}
 					},
 					"world": {
-						"x": 256,
-						"y": 128,
+						"x": 0,
+						"y": 896,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,
@@ -2715,7 +2843,32 @@
 						"Active": false,
 						"Frozen": true
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "size",
+								"wave": "sine",
+								"period": 0.7,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 20,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": false,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 5,
 						"uid": 8,
@@ -2742,8 +2895,8 @@
 						}
 					},
 					"world": {
-						"x": 768,
-						"y": 0,
+						"x": 1024,
+						"y": 768,
 						"width": 128,
 						"height": 128,
 						"originX": 0.5,

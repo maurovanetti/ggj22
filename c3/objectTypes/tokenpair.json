@@ -27,6 +27,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 988940643358698
+		},
+		{
+			"name": "SequenceIndex",
+			"type": "number",
+			"desc": "",
+			"sid": 813511834678973
 		}
 	],
 	"behaviorTypes": [],
