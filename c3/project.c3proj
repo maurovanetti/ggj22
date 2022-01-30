@@ -138,7 +138,8 @@
 			"Background",
 			"RabbitAttackArea",
 			"DangerArea",
-			"gameover"
+			"gameover",
+			"TitleScreen"
 		],
 		"subfolders": []
 	},
@@ -165,7 +166,8 @@
 	"layouts": {
 		"items": [
 			"Level",
-			"GameOver"
+			"GameOver",
+			"Start"
 		],
 		"subfolders": []
 	},
@@ -173,7 +175,8 @@
 		"items": [
 			"MainLoop",
 			"Debug",
-			"GameOver"
+			"GameOver",
+			"Start"
 		],
 		"subfolders": []
 	},
@@ -441,5 +444,5 @@
 	},
 	"viewportWidth": 1024,
 	"viewportHeight": 1366,
-	"firstLayout": null
+	"firstLayout": "Start"
 }

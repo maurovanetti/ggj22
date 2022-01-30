@@ -1,0 +1,40 @@
+{
+	"name": "Start",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 480877549356049
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 874682134851875,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 369278523849474
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 620982052290769,
+					"parameters": {
+						"layout": "Level"
+					}
+				}
+			],
+			"sid": 344853147180800
+		}
+	],
+	"sid": 270385330110185
+}
