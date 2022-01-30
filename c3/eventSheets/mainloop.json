@@ -1396,6 +1396,46 @@
 					"children": [
 						{
 							"eventType": "variable",
+							"name": "ShortActionDelay",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": true,
+							"sid": 970140227657794
+						},
+						{
+							"eventType": "variable",
+							"name": "LongActionDelay",
+							"type": "number",
+							"initialValue": "2",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": true,
+							"sid": 849075698677191
+						},
+						{
+							"eventType": "variable",
+							"name": "OffensiveActionDelay",
+							"type": "number",
+							"initialValue": "0.8",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": true,
+							"sid": 488981233694393
+						},
+						{
+							"eventType": "variable",
+							"name": "AbortedActionDelay",
+							"type": "number",
+							"initialValue": "0.8",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": true,
+							"sid": 208921032375320
+						},
+						{
+							"eventType": "variable",
 							"name": "RabbitUID",
 							"type": "number",
 							"initialValue": "0",
@@ -1555,9 +1595,9 @@
 									"actions": [
 										{
 											"callFunction": "ResolveIn",
-											"sid": 551165148456696,
+											"sid": 673145420835719,
 											"parameters": [
-												"1"
+												"OffensiveActionDelay"
 											]
 										}
 									],
@@ -1641,9 +1681,9 @@
 									"actions": [
 										{
 											"callFunction": "ResolveIn",
-											"sid": 645883676384005,
+											"sid": 646243621263906,
 											"parameters": [
-												"1"
+												"OffensiveActionDelay"
 											]
 										}
 									],
@@ -1811,9 +1851,9 @@
 																},
 																{
 																	"callFunction": "ResolveIn",
-																	"sid": 674925209202889,
+																	"sid": 261668341699222,
 																	"parameters": [
-																		"2"
+																		"ShortActionDelay"
 																	]
 																}
 															],
@@ -1884,9 +1924,9 @@
 																},
 																{
 																	"callFunction": "ResolveIn",
-																	"sid": 681294098290701,
+																	"sid": 667786790364646,
 																	"parameters": [
-																		"2"
+																		"LongActionDelay"
 																	]
 																}
 															],
@@ -1904,9 +1944,9 @@
 															"actions": [
 																{
 																	"callFunction": "ResolveIn",
-																	"sid": 528936154479164,
+																	"sid": 542212758583992,
 																	"parameters": [
-																		"1"
+																		"AbortedActionDelay"
 																	]
 																}
 															],
@@ -1949,9 +1989,9 @@
 														},
 														{
 															"callFunction": "ResolveIn",
-															"sid": 539432226793959,
+															"sid": 636804663891244,
 															"parameters": [
-																"1.5"
+																"ShortActionDelay"
 															]
 														}
 													],
@@ -1969,9 +2009,9 @@
 													"actions": [
 														{
 															"callFunction": "ResolveIn",
-															"sid": 242761191034866,
+															"sid": 367893793359873,
 															"parameters": [
-																"1"
+																"AbortedActionDelay"
 															]
 														}
 													],
@@ -2070,9 +2110,9 @@
 																},
 																{
 																	"callFunction": "ResolveIn",
-																	"sid": 905573431789051,
+																	"sid": 564963535422085,
 																	"parameters": [
-																		"2"
+																		"ShortActionDelay"
 																	]
 																}
 															],
@@ -2143,9 +2183,9 @@
 																},
 																{
 																	"callFunction": "ResolveIn",
-																	"sid": 114856539626110,
+																	"sid": 986756391637400,
 																	"parameters": [
-																		"2"
+																		"LongActionDelay"
 																	]
 																}
 															],
@@ -2163,9 +2203,9 @@
 															"actions": [
 																{
 																	"callFunction": "ResolveIn",
-																	"sid": 430791488053982,
+																	"sid": 435249493243591,
 																	"parameters": [
-																		"1"
+																		"AbortedActionDelay"
 																	]
 																}
 															],
@@ -2208,9 +2248,9 @@
 														},
 														{
 															"callFunction": "ResolveIn",
-															"sid": 911515398192291,
+															"sid": 234214652295303,
 															"parameters": [
-																"1.5"
+																"ShortActionDelay"
 															]
 														}
 													],
@@ -2228,9 +2268,9 @@
 													"actions": [
 														{
 															"callFunction": "ResolveIn",
-															"sid": 164672981052835,
+															"sid": 710704729242083,
 															"parameters": [
-																"1"
+																"AbortedActionDelay"
 															]
 														}
 													],
@@ -2290,9 +2330,9 @@
 									"actions": [
 										{
 											"callFunction": "ResolveIn",
-											"sid": 233654221452247,
+											"sid": 815977713882015,
 											"parameters": [
-												"1"
+												"0.5"
 											]
 										}
 									],
@@ -2551,6 +2591,16 @@
 					"children": [
 						{
 							"eventType": "variable",
+							"name": "CompatingActionDelay",
+							"type": "number",
+							"initialValue": "0.8",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 488852693514276
+						},
+						{
+							"eventType": "variable",
 							"name": "SomethingHappened",
 							"type": "boolean",
 							"initialValue": "false",
@@ -2672,9 +2722,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 295048129350724,
+									"sid": 626251516211969,
 									"parameters": {
-										"seconds": "1.0"
+										"seconds": "CompatingActionDelay"
 									}
 								},
 								{
@@ -2701,6 +2751,16 @@
 					"children": [
 						{
 							"eventType": "variable",
+							"name": "ComboDelay",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 292525171832946
+						},
+						{
+							"eventType": "variable",
 							"name": "SomethingHappened",
 							"type": "boolean",
 							"initialValue": "false",
@@ -2708,17 +2768,6 @@
 							"isStatic": false,
 							"isConstant": false,
 							"sid": 629925026317550
-						},
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"callFunction": "UpdateBoardModel",
-									"sid": 953013344796961
-								}
-							],
-							"sid": 436958382155587
 						},
 						{
 							"eventType": "block",
@@ -2934,9 +2983,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 780444488701912,
+									"sid": 506188345890807,
 									"parameters": {
-										"seconds": "1.0"
+										"seconds": "ComboDelay"
 									}
 								},
 								{
@@ -3132,6 +3181,16 @@
 					"isActiveOnStart": false,
 					"children": [
 						{
+							"eventType": "variable",
+							"name": "EndOfTurnDelay",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 708202053042592
+						},
+						{
 							"eventType": "block",
 							"conditions": [],
 							"actions": [
@@ -3165,9 +3224,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 955173684255465,
+									"sid": 203555273678923,
 									"parameters": {
-										"seconds": "1"
+										"seconds": "EndOfTurnDelay"
 									}
 								},
 								{
@@ -3202,71 +3261,73 @@
 					"eventType": "function-block",
 					"conditions": [],
 					"actions": [],
-					"sid": 402046264158995
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
+					"sid": 402046264158995,
+					"children": [
 						{
-							"id": "clear",
-							"objectClass": "Board",
-							"sid": 536067663361605,
-							"parameters": {
-								"value": "0"
-							}
-						}
-					],
-					"sid": 649368332587048
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 706264949603992,
-							"parameters": {
-								"object": "Pawn"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-at-xyz",
-							"objectClass": "Board",
-							"sid": 256243276660098,
-							"parameters": {
-								"x": "Pawn.TileMovement.GridX",
-								"y": "Pawn.TileMovement.GridY",
-								"z": "TypesIndex",
-								"value": "Pawn.ObjectTypeName"
-							}
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "clear",
+									"objectClass": "Board",
+									"sid": 550419800755726,
+									"parameters": {
+										"value": "0"
+									}
+								}
+							],
+							"sid": 170162566801406
 						},
 						{
-							"id": "set-at-xyz",
-							"objectClass": "Board",
-							"sid": 275974969313983,
-							"parameters": {
-								"x": "Pawn.TileMovement.GridX",
-								"y": "Pawn.TileMovement.GridY",
-								"z": "UIDsIndex",
-								"value": "Pawn.UID"
-							}
-						},
-						{
-							"id": "set-at-xyz",
-							"objectClass": "Board",
-							"sid": 598060303809316,
-							"parameters": {
-								"x": "Pawn.TileMovement.GridX",
-								"y": "Pawn.TileMovement.GridY",
-								"z": "CombosIndex",
-								"value": "\"N\""
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 368217109694515,
+									"parameters": {
+										"object": "Pawn"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xyz",
+									"objectClass": "Board",
+									"sid": 897176825908362,
+									"parameters": {
+										"x": "Pawn.TileMovement.GridX",
+										"y": "Pawn.TileMovement.GridY",
+										"z": "TypesIndex",
+										"value": "Pawn.ObjectTypeName"
+									}
+								},
+								{
+									"id": "set-at-xyz",
+									"objectClass": "Board",
+									"sid": 946692054679164,
+									"parameters": {
+										"x": "Pawn.TileMovement.GridX",
+										"y": "Pawn.TileMovement.GridY",
+										"z": "UIDsIndex",
+										"value": "Pawn.UID"
+									}
+								},
+								{
+									"id": "set-at-xyz",
+									"objectClass": "Board",
+									"sid": 106118524929673,
+									"parameters": {
+										"x": "Pawn.TileMovement.GridX",
+										"y": "Pawn.TileMovement.GridY",
+										"z": "CombosIndex",
+										"value": "\"N\""
+									}
+								}
+							],
+							"sid": 920311152066570
 						}
-					],
-					"sid": 603716317642730
+					]
 				}
 			],
 			"sid": 640630344879882
