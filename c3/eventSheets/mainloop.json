@@ -2027,6 +2027,16 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
+							"eventType": "variable",
+							"name": "ReadyToGo",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 915047978066388
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -2067,8 +2077,13 @@
 							],
 							"actions": [
 								{
-									"callFunction": "EndPlanning",
-									"sid": 230254084932306
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 448904448866734,
+									"parameters": {
+										"variable": "ReadyToGo",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 543769546550540
@@ -2089,11 +2104,55 @@
 							],
 							"actions": [
 								{
-									"callFunction": "EndPlanning",
-									"sid": 711422950893211
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 339260138542430,
+									"parameters": {
+										"variable": "ReadyToGo",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 106725974029597
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 308331924633312,
+									"parameters": {
+										"variable": "ReadyToGo"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 564446518254704,
+									"parameters": {
+										"first-value": "ActiveTokenPairUID",
+										"comparison": 0,
+										"second-value": "-1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 506909355908170,
+									"parameters": {
+										"variable": "ReadyToGo",
+										"value": "false"
+									}
+								},
+								{
+									"callFunction": "EndPlanning",
+									"sid": 143944287038634
+								}
+							],
+							"sid": 616259696380191
 						},
 						{
 							"functionName": "EndPlanning",
