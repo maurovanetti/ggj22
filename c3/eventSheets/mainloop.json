@@ -3629,6 +3629,42 @@
 							"sid": 454461059746121,
 							"children": [
 								{
+									"eventType": "variable",
+									"name": "Temp",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 145611010162232
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 961694307968400,
+											"parameters": {
+												"variable": "Temp",
+												"value": "Pawn.TileMovement.SpeedY"
+											}
+										},
+										{
+											"id": "set-speed",
+											"objectClass": "Pawn",
+											"sid": 607729154866409,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"x": "Pawn.TileMovement.SpeedX",
+												"y": "Pawn.TileMovement.SpeedX"
+											}
+										}
+									],
+									"sid": 707028335810096
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -3721,6 +3757,31 @@
 										}
 									],
 									"sid": 756163074180804
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 135539706571925,
+											"parameters": {
+												"seconds": "2"
+											}
+										},
+										{
+											"id": "set-speed",
+											"objectClass": "Pawn",
+											"sid": 683050726840542,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"x": "Pawn.TileMovement.SpeedX",
+												"y": "Temp"
+											}
+										}
+									],
+									"sid": 372010770991596
 								}
 							]
 						}
