@@ -123,7 +123,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -168,7 +168,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -213,7 +213,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -258,7 +258,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -303,7 +303,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -348,7 +348,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -393,7 +393,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -438,7 +438,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -483,7 +483,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -557,7 +557,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -602,7 +602,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -647,7 +647,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -692,7 +692,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -737,7 +737,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -782,7 +782,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -827,7 +827,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -997,7 +997,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -1042,7 +1042,7 @@
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
 								"speed-x": 400,
-								"speed-y": 400,
+								"speed-y": 800,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false

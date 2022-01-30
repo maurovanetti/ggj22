@@ -2448,6 +2448,15 @@
 									],
 									"actions": [
 										{
+											"id": "set-animation",
+											"objectClass": "Rabbit",
+											"sid": 789352762017068,
+											"parameters": {
+												"animation": "\"Attack\"",
+												"from": "beginning"
+											}
+										},
+										{
 											"callFunction": "ResolveIn",
 											"sid": 673145420835719,
 											"parameters": [
@@ -2533,6 +2542,15 @@
 										}
 									],
 									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Rabbit",
+											"sid": 902167420383540,
+											"parameters": {
+												"animation": "\"Swap\"",
+												"from": "beginning"
+											}
+										},
 										{
 											"callFunction": "ResolveIn",
 											"sid": 646243621263906,
@@ -2678,20 +2696,29 @@
 															],
 															"actions": [
 																{
-																	"id": "simulate-control",
+																	"id": "set-animation",
 																	"objectClass": "BigRabbit",
-																	"sid": 329836594720364,
-																	"behaviorType": "TileMovement",
+																	"sid": 216692827456370,
 																	"parameters": {
-																		"control": "right"
+																		"animation": "\"Jump\"",
+																		"from": "beginning"
 																	}
 																},
 																{
 																	"id": "wait",
 																	"objectClass": "System",
-																	"sid": 498283756103632,
+																	"sid": 414612867097100,
 																	"parameters": {
-																		"seconds": "0.2"
+																		"seconds": "0.5"
+																	}
+																},
+																{
+																	"id": "simulate-control",
+																	"objectClass": "BigRabbit",
+																	"sid": 516540023299426,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"control": "right"
 																	}
 																},
 																{
@@ -2786,6 +2813,46 @@
 															],
 															"actions": [
 																{
+																	"type": "comment",
+																	"text": "If you change this, you will repent"
+																},
+																{
+																	"id": "set-animation",
+																	"objectClass": "SmallRabbit",
+																	"sid": 428977574537642,
+																	"parameters": {
+																		"animation": "\"Switch\"",
+																		"from": "beginning"
+																	}
+																},
+																{
+																	"id": "set-animation",
+																	"objectClass": "BigRabbit",
+																	"sid": 292667794426651,
+																	"parameters": {
+																		"animation": "\"Switch\"",
+																		"from": "beginning"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 787523997238779,
+																	"parameters": {
+																		"seconds": "0.375"
+																	}
+																},
+																{
+																	"id": "set-speed",
+																	"objectClass": "SmallRabbit",
+																	"sid": 888427854751193,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"x": "150",
+																		"y": "0"
+																	}
+																},
+																{
 																	"id": "set-grid-position",
 																	"objectClass": "SmallRabbit",
 																	"sid": 796141159367497,
@@ -2794,6 +2861,16 @@
 																		"x": "BigRabbit.TileMovement.GridX + 2",
 																		"y": "SmallRabbit.TileMovement.GridY",
 																		"instant": "animate"
+																	}
+																},
+																{
+																	"id": "set-speed",
+																	"objectClass": "SmallRabbit",
+																	"sid": 590853896861312,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"x": "300",
+																		"y": "0"
 																	}
 																},
 																{
@@ -2853,9 +2930,26 @@
 															"text": "Enough room to move"
 														},
 														{
+															"id": "set-animation",
+															"objectClass": "Rabbit",
+															"sid": 719105429174967,
+															"parameters": {
+																"animation": "\"Jump\"",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 960659185954996,
+															"parameters": {
+																"seconds": "0.5"
+															}
+														},
+														{
 															"id": "simulate-control",
 															"objectClass": "Rabbit",
-															"sid": 155261631559534,
+															"sid": 603253363428037,
 															"behaviorType": "TileMovement",
 															"parameters": {
 																"control": "right"
@@ -2957,20 +3051,29 @@
 															],
 															"actions": [
 																{
-																	"id": "simulate-control",
+																	"id": "set-animation",
 																	"objectClass": "BigRabbit",
-																	"sid": 647621790075892,
-																	"behaviorType": "TileMovement",
+																	"sid": 787428425354143,
 																	"parameters": {
-																		"control": "left"
+																		"animation": "\"Jump\"",
+																		"from": "beginning"
 																	}
 																},
 																{
 																	"id": "wait",
 																	"objectClass": "System",
-																	"sid": 448228335598217,
+																	"sid": 628834333154915,
 																	"parameters": {
-																		"seconds": "0.2"
+																		"seconds": "0.5"
+																	}
+																},
+																{
+																	"id": "simulate-control",
+																	"objectClass": "BigRabbit",
+																	"sid": 173481462668611,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"control": "left"
 																	}
 																},
 																{
@@ -3065,6 +3168,42 @@
 															],
 															"actions": [
 																{
+																	"id": "set-animation",
+																	"objectClass": "SmallRabbit",
+																	"sid": 842115973070341,
+																	"parameters": {
+																		"animation": "\"Switch\"",
+																		"from": "beginning"
+																	}
+																},
+																{
+																	"id": "set-animation",
+																	"objectClass": "BigRabbit",
+																	"sid": 891060095555138,
+																	"parameters": {
+																		"animation": "\"Switch\"",
+																		"from": "beginning"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 884556203946919,
+																	"parameters": {
+																		"seconds": "0.375"
+																	}
+																},
+																{
+																	"id": "set-speed",
+																	"objectClass": "SmallRabbit",
+																	"sid": 696357422237701,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"x": "150",
+																		"y": "0"
+																	}
+																},
+																{
 																	"id": "set-grid-position",
 																	"objectClass": "SmallRabbit",
 																	"sid": 239349166115995,
@@ -3073,6 +3212,16 @@
 																		"x": "BigRabbit.TileMovement.GridX - 1",
 																		"y": "SmallRabbit.TileMovement.GridY",
 																		"instant": "animate"
+																	}
+																},
+																{
+																	"id": "set-speed",
+																	"objectClass": "SmallRabbit",
+																	"sid": 790436515067218,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"x": "300",
+																		"y": "0"
 																	}
 																},
 																{
@@ -3132,9 +3281,26 @@
 															"text": "Enough room to move"
 														},
 														{
+															"id": "set-animation",
+															"objectClass": "Rabbit",
+															"sid": 147934669365936,
+															"parameters": {
+																"animation": "\"Jump\"",
+																"from": "beginning"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 791816045050849,
+															"parameters": {
+																"seconds": "0.5"
+															}
+														},
+														{
 															"id": "simulate-control",
 															"objectClass": "Rabbit",
-															"sid": 672802785591364,
+															"sid": 707227695362924,
 															"behaviorType": "TileMovement",
 															"parameters": {
 																"control": "left"
@@ -4344,26 +4510,6 @@
 																"comparison": 0,
 																"second-value": "Pawn.TileMovement.GridX"
 															}
-														},
-														{
-															"id": "compare-two-values",
-															"objectClass": "System",
-															"sid": 201299954366583,
-															"parameters": {
-																"first-value": "BigRabbit.TileMovement.GridX",
-																"comparison": 0,
-																"second-value": "Pawn.TileMovement.GridX"
-															}
-														},
-														{
-															"id": "compare-two-values",
-															"objectClass": "System",
-															"sid": 746414638263323,
-															"parameters": {
-																"first-value": "BigRabbit.TileMovement.GridX",
-																"comparison": 0,
-																"second-value": "Pawn.TileMovement.GridX - 1"
-															}
 														}
 													],
 													"actions": [
@@ -4375,9 +4521,65 @@
 																"variable": "Lives",
 																"value": "1"
 															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "SmallRabbit",
+															"sid": 535040056783055,
+															"parameters": {
+																"animation": "\"Hurt\"",
+																"from": "beginning"
+															}
 														}
 													],
 													"sid": 691457724949053,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 896289441657011,
+															"parameters": {
+																"first-value": "BigRabbit.TileMovement.GridX",
+																"comparison": 0,
+																"second-value": "Pawn.TileMovement.GridX"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 908457124732472,
+															"parameters": {
+																"first-value": "BigRabbit.TileMovement.GridX",
+																"comparison": 0,
+																"second-value": "Pawn.TileMovement.GridX - 1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "subtract-from-eventvar",
+															"objectClass": "System",
+															"sid": 203955561417003,
+															"parameters": {
+																"variable": "Lives",
+																"value": "1"
+															}
+														},
+														{
+															"id": "set-animation",
+															"objectClass": "BigRabbit",
+															"sid": 612080346037508,
+															"parameters": {
+																"animation": "\"Hurt\"",
+																"from": "beginning"
+															}
+														}
+													],
+													"sid": 355065843873652,
 													"isOrBlock": true
 												}
 											]
@@ -4584,6 +4786,38 @@
 				}
 			],
 			"sid": 969529219442941
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Idle Rabbits",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-animation-finished",
+							"objectClass": "Rabbit",
+							"sid": 574585335346407
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Rabbit",
+							"sid": 634106754294737,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 943261009219227
+				}
+			],
+			"sid": 864844941521465
 		}
 	],
 	"sid": 912314645175753

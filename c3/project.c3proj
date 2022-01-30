@@ -55,6 +55,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -117,7 +125,8 @@
 			"Wasp",
 			"Life",
 			"GameOverMessage",
-			"Audio"
+			"Audio",
+			"Keyboard"
 		],
 		"subfolders": []
 	},
