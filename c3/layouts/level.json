@@ -122,8 +122,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -167,8 +167,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -212,8 +212,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -257,8 +257,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -302,8 +302,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -347,8 +347,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -392,8 +392,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -437,8 +437,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -482,8 +482,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -556,8 +556,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -601,8 +601,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -646,8 +646,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -691,8 +691,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -736,8 +736,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -781,8 +781,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -826,8 +826,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -996,8 +996,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -1041,8 +1041,8 @@
 								"grid-height": 128,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 400,
+								"speed-y": 400,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -2012,6 +2012,223 @@
 						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Life",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 28,
+					"instanceVariables": {
+						"Index": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 145,
+						"y": 1268,
+						"width": 29,
+						"height": 23,
+						"originX": 0.5517241379310345,
+						"originY": 0.6086956521739131,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Life",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 33,
+					"instanceVariables": {
+						"Index": 1
+					},
+					"behaviors": {},
+					"world": {
+						"x": 182.94335922747845,
+						"y": 1265.0703124463557,
+						"width": 29,
+						"height": 23,
+						"originX": 0.5517241379310345,
+						"originY": 0.6086956521739131,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Life",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 35,
+					"instanceVariables": {
+						"Index": 2
+					},
+					"behaviors": {},
+					"world": {
+						"x": 217.81640600860112,
+						"y": 1273.1269532188771,
+						"width": 29,
+						"height": 23,
+						"originX": 0.5517241379310345,
+						"originY": 0.6086956521739131,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Life",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 36,
+					"instanceVariables": {
+						"Index": 3
+					},
+					"behaviors": {},
+					"world": {
+						"x": 252.81640600860112,
+						"y": 1268,
+						"width": 29,
+						"height": 23,
+						"originX": 0.5517241379310345,
+						"originY": 0.6086956521739131,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Life",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 38,
+					"instanceVariables": {
+						"Index": 4
+					},
+					"behaviors": {},
+					"world": {
+						"x": 285.7597652360796,
+						"y": 1276.7890626609326,
+						"width": 29,
+						"height": 23,
+						"originX": 0.5517241379310345,
+						"originY": 0.6086956521739131,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.003449961669835133,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Life",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 39,
+					"instanceVariables": {
+						"Index": 5
+					},
+					"behaviors": {},
+					"world": {
+						"x": 314.4355463519691,
+						"y": 1261.4082030043005,
+						"width": 29,
+						"height": 23,
+						"originX": 0.5517241379310345,
+						"originY": 0.6086956521739131,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Life",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 40,
+					"instanceVariables": {
+						"Index": 6
+					},
+					"behaviors": {},
+					"world": {
+						"x": 350.5058587983248,
+						"y": 1265.0703124463557,
+						"width": 29,
+						"height": 23,
+						"originX": 0.5517241379310345,
+						"originY": 0.6086956521739131,
 						"color": [
 							1,
 							1,

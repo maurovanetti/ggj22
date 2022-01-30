@@ -73,6 +73,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "Lives",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 450327331456053
+		},
+		{
+			"eventType": "variable",
 			"name": "CombosIndex",
 			"type": "number",
 			"initialValue": "2",
@@ -3228,6 +3238,11 @@
 												"group-name": "\"Resolve Token\"",
 												"state": "deactivated"
 											}
+										},
+										{
+											"callFunction": "PaintTokens",
+											"sid": 330485797919114,
+											"disabled": true
 										}
 									],
 									"sid": 779058552659465
@@ -4097,11 +4112,21 @@
 							"eventType": "variable",
 							"name": "EndOfTurnDelay",
 							"type": "number",
-							"initialValue": "1",
+							"initialValue": "3",
 							"comment": "",
 							"isStatic": false,
-							"isConstant": false,
+							"isConstant": true,
 							"sid": 708202053042592
+						},
+						{
+							"eventType": "variable",
+							"name": "EndOfGameDelay",
+							"type": "number",
+							"initialValue": "4",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": true,
+							"sid": 675396408381494
 						},
 						{
 							"eventType": "block",
@@ -4234,7 +4259,110 @@
 									}
 								}
 							],
-							"sid": 266054266821149
+							"sid": 266054266821149,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 906552517822133,
+											"parameters": {
+												"object": "Enemy"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 374591221140166,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "Pawn",
+													"sid": 377714850137545,
+													"parameters": {
+														"unique-id": "Enemy.UID"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Pawn",
+													"sid": 433639673491068,
+													"parameters": {
+														"instance-variable": "Preview"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 530392115690360,
+													"parameters": {
+														"first-value": "Pawn.TileMovement.GridY",
+														"comparison": 0,
+														"second-value": "BoardBottom"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 689697712854786,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 943633848345667,
+															"parameters": {
+																"first-value": "SmallRabbit.TileMovement.GridX",
+																"comparison": 0,
+																"second-value": "Pawn.TileMovement.GridX"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 201299954366583,
+															"parameters": {
+																"first-value": "BigRabbit.TileMovement.GridX",
+																"comparison": 0,
+																"second-value": "Pawn.TileMovement.GridX"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 746414638263323,
+															"parameters": {
+																"first-value": "BigRabbit.TileMovement.GridX",
+																"comparison": 0,
+																"second-value": "Pawn.TileMovement.GridX - 1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "subtract-from-eventvar",
+															"objectClass": "System",
+															"sid": 204771621695620,
+															"parameters": {
+																"variable": "Lives",
+																"value": "1"
+															}
+														}
+													],
+													"sid": 691457724949053,
+													"isOrBlock": true
+												}
+											]
+										}
+									]
+								}
+							]
 						}
 					],
 					"sid": 874158367781036
@@ -4328,6 +4456,112 @@
 				}
 			],
 			"sid": 640630344879882
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Defeat Conditions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "EndOfGameDelay2",
+					"type": "number",
+					"initialValue": "4",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": true,
+					"sid": 555238494162568
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Life",
+							"sid": 950289363139320,
+							"parameters": {
+								"instance-variable": "Index",
+								"comparison": 5,
+								"value": "Lives"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Life",
+							"sid": 658572840604347,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 836229552447259
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Life",
+							"sid": 159258793756555,
+							"parameters": {
+								"instance-variable": "Index",
+								"comparison": 2,
+								"value": "Lives"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Life",
+							"sid": 231415564047869,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 404914483004621
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 296947792741147,
+							"parameters": {
+								"variable": "Lives",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 658041065482619,
+							"parameters": {
+								"seconds": "EndOfGameDelay2"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 197655778154799,
+							"parameters": {
+								"layout": "GameOver"
+							}
+						}
+					],
+					"sid": 978199082974720
+				}
+			],
+			"sid": 969529219442941
 		}
 	],
 	"sid": 912314645175753
