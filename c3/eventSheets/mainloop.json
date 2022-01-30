@@ -104,138 +104,191 @@
 			"sid": 222873672126575,
 			"children": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-x",
-							"objectClass": "SmallRabbit",
-							"sid": 513616483493284,
-							"parameters": {
-								"comparison": 2,
-								"x-co-ordinate": "BigRabbit.X"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 845492789281762,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "Token",
-									"sid": 832544981316579,
-									"parameters": {
-										"comparison": 2,
-										"x-co-ordinate": "CenterX"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Token",
-									"sid": 677906135138401,
-									"parameters": {
-										"animation": "\"White\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 860433823725607
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-x",
-									"objectClass": "Token",
-									"sid": 451663261176280,
-									"parameters": {
-										"comparison": 5,
-										"x-co-ordinate": "CenterX"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Token",
-									"sid": 522893164738676,
-									"parameters": {
-										"animation": "\"Black\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 245673712860581
-						}
-					]
+					"eventType": "variable",
+					"name": "TargetColor",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 237089636007724
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "else",
+							"id": "for-each",
 							"objectClass": "System",
-							"sid": 225109014034714
+							"sid": 545158444551439,
+							"parameters": {
+								"object": "Token"
+							}
 						}
 					],
 					"actions": [],
-					"sid": 902912808420258,
+					"sid": 717341404095865,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "compare-x",
-									"objectClass": "Token",
-									"sid": 521521844120585,
+									"objectClass": "SmallRabbit",
+									"sid": 368094747037464,
 									"parameters": {
 										"comparison": 2,
-										"x-co-ordinate": "CenterX"
+										"x-co-ordinate": "BigRabbit.X"
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 389141304372493,
+							"children": [
 								{
-									"id": "set-animation",
-									"objectClass": "Token",
-									"sid": 759066650839696,
-									"parameters": {
-										"animation": "\"Black\"",
-										"from": "beginning"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Token",
+											"sid": 623378529069470,
+											"parameters": {
+												"comparison": 2,
+												"x-co-ordinate": "CenterX"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 406619243520869,
+											"parameters": {
+												"variable": "TargetColor",
+												"value": "\"White\""
+											}
+										}
+									],
+									"sid": 487881329402930
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Token",
+											"sid": 409297388202581,
+											"parameters": {
+												"comparison": 5,
+												"x-co-ordinate": "CenterX"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 640830475271583,
+											"parameters": {
+												"variable": "TargetColor",
+												"value": "\"Black\""
+											}
+										}
+									],
+									"sid": 418536577032237
 								}
-							],
-							"sid": 294007451290397
+							]
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-x",
+									"id": "else",
+									"objectClass": "System",
+									"sid": 226223621801647
+								}
+							],
+							"actions": [],
+							"sid": 730359345397502,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Token",
+											"sid": 689443798005832,
+											"parameters": {
+												"comparison": 2,
+												"x-co-ordinate": "CenterX"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 426672689535983,
+											"parameters": {
+												"variable": "TargetColor",
+												"value": "\"Black\""
+											}
+										}
+									],
+									"sid": 826443438547322
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Token",
+											"sid": 124640404888143,
+											"parameters": {
+												"comparison": 5,
+												"x-co-ordinate": "CenterX"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 916071925703893,
+											"parameters": {
+												"variable": "TargetColor",
+												"value": "\"White\""
+											}
+										}
+									],
+									"sid": 347727006757465
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
 									"objectClass": "Token",
-									"sid": 713324034157985,
+									"sid": 322590993590799,
 									"parameters": {
-										"comparison": 5,
-										"x-co-ordinate": "CenterX"
-									}
+										"animation": "TargetColor"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
 									"id": "set-animation",
 									"objectClass": "Token",
-									"sid": 547717845975614,
+									"sid": 483040840638446,
 									"parameters": {
-										"animation": "\"White\"",
+										"animation": "TargetColor",
 										"from": "beginning"
 									}
 								}
 							],
-							"sid": 432865873832874
+							"sid": 938884538742593
 						}
 					]
 				}
