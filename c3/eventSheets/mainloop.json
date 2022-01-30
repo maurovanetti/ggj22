@@ -1457,17 +1457,6 @@
 							],
 							"actions": [
 								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 578057033770416,
-									"parameters": {
-										"audio-file": "tud",
-										"loop": "not-looping",
-										"volume": "-10",
-										"tag-optional": "\"\""
-									}
-								},
-								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
 									"sid": 175806885997997,
@@ -2120,6 +2109,17 @@
 							],
 							"actions": [
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 197293950291504,
+									"parameters": {
+										"audio-file": "button-play",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 339260138542430,
@@ -2672,6 +2672,17 @@
 											],
 											"actions": [
 												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 728717936387185,
+													"parameters": {
+														"audio-file": "white-rabbit-hurt",
+														"loop": "not-looping",
+														"volume": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
 													"callFunction": "DestroyPawn",
 													"sid": 724400811004173,
 													"parameters": [
@@ -2700,6 +2711,17 @@
 												}
 											],
 											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 949145338688616,
+													"parameters": {
+														"audio-file": "black-rabbit-attack",
+														"loop": "not-looping",
+														"volume": "0",
+														"tag-optional": "\"\""
+													}
+												},
 												{
 													"callFunction": "DestroyPawn",
 													"sid": 644514664235774,
@@ -2767,6 +2789,17 @@
 											],
 											"actions": [
 												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 273048365665283,
+													"parameters": {
+														"audio-file": "plin",
+														"loop": "not-looping",
+														"volume": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
 													"callFunction": "SwapPawns",
 													"sid": 719290368436733,
 													"parameters": [
@@ -2789,6 +2822,17 @@
 												}
 											],
 											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 622390536635915,
+													"parameters": {
+														"audio-file": "plin",
+														"loop": "not-looping",
+														"volume": "0",
+														"tag-optional": "\"\""
+													}
+												},
 												{
 													"callFunction": "SwapPawns",
 													"sid": 205204302125292,
@@ -2894,6 +2938,17 @@
 																	"parameters": {
 																		"animation": "\"Jump\"",
 																		"from": "beginning"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 665525673249867,
+																	"parameters": {
+																		"audio-file": "black-rabbit-jump",
+																		"loop": "not-looping",
+																		"volume": "0",
+																		"tag-optional": "\"\""
 																	}
 																},
 																{
@@ -3026,6 +3081,17 @@
 																	}
 																},
 																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 115894485567217,
+																	"parameters": {
+																		"audio-file": "whiterabbit-switch",
+																		"loop": "not-looping",
+																		"volume": "0",
+																		"tag-optional": "\"\""
+																	}
+																},
+																{
 																	"id": "set-animation",
 																	"objectClass": "BigRabbit",
 																	"sid": 292667794426651,
@@ -3128,42 +3194,106 @@
 														{
 															"type": "comment",
 															"text": "Enough room to move"
-														},
-														{
-															"id": "set-animation",
-															"objectClass": "Rabbit",
-															"sid": 719105429174967,
-															"parameters": {
-																"animation": "\"Jump\"",
-																"from": "beginning"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 960659185954996,
-															"parameters": {
-																"seconds": "0.5"
-															}
-														},
-														{
-															"id": "simulate-control",
-															"objectClass": "Rabbit",
-															"sid": 603253363428037,
-															"behaviorType": "TileMovement",
-															"parameters": {
-																"control": "right"
-															}
-														},
-														{
-															"callFunction": "ResolveIn",
-															"sid": 636804663891244,
-															"parameters": [
-																"ShortActionDelay"
-															]
 														}
 													],
-													"sid": 968003115757148
+													"sid": 968003115757148,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 580159542655443,
+																	"parameters": {
+																		"variable": "WhiteTurn"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 662312904903743,
+																	"parameters": {
+																		"audio-file": "white-rabbit-jump",
+																		"loop": "not-looping",
+																		"volume": "0",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 461164957066388
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 450071532354711,
+																	"parameters": {
+																		"variable": "WhiteTurn"
+																	},
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 935635181572787,
+																	"parameters": {
+																		"audio-file": "black-rabbit-jump",
+																		"loop": "not-looping",
+																		"volume": "0",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 162815435870737
+														},
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "set-animation",
+																	"objectClass": "Rabbit",
+																	"sid": 719105429174967,
+																	"parameters": {
+																		"animation": "\"Jump\"",
+																		"from": "beginning"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 960659185954996,
+																	"parameters": {
+																		"seconds": "0.5"
+																	}
+																},
+																{
+																	"id": "simulate-control",
+																	"objectClass": "Rabbit",
+																	"sid": 603253363428037,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"control": "right"
+																	}
+																},
+																{
+																	"callFunction": "ResolveIn",
+																	"sid": 636804663891244,
+																	"parameters": [
+																		"ShortActionDelay"
+																	]
+																}
+															],
+															"sid": 925829435697049
+														}
+													]
 												},
 												{
 													"eventType": "block",
@@ -3257,6 +3387,17 @@
 																	"parameters": {
 																		"animation": "\"Jump\"",
 																		"from": "beginning"
+																	}
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 397818254308077,
+																	"parameters": {
+																		"audio-file": "black-rabbit-jump",
+																		"loop": "not-looping",
+																		"volume": "0",
+																		"tag-optional": "\"\""
 																	}
 																},
 																{
@@ -3385,6 +3526,17 @@
 																	}
 																},
 																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 334282784868144,
+																	"parameters": {
+																		"audio-file": "whiterabbit-switch",
+																		"loop": "not-looping",
+																		"volume": "0",
+																		"tag-optional": "\"\""
+																	}
+																},
+																{
 																	"id": "set-animation",
 																	"objectClass": "BigRabbit",
 																	"sid": 891060095555138,
@@ -3487,42 +3639,106 @@
 														{
 															"type": "comment",
 															"text": "Enough room to move"
-														},
-														{
-															"id": "set-animation",
-															"objectClass": "Rabbit",
-															"sid": 147934669365936,
-															"parameters": {
-																"animation": "\"Jump\"",
-																"from": "beginning"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 791816045050849,
-															"parameters": {
-																"seconds": "0.5"
-															}
-														},
-														{
-															"id": "simulate-control",
-															"objectClass": "Rabbit",
-															"sid": 707227695362924,
-															"behaviorType": "TileMovement",
-															"parameters": {
-																"control": "left"
-															}
-														},
-														{
-															"callFunction": "ResolveIn",
-															"sid": 234214652295303,
-															"parameters": [
-																"ShortActionDelay"
-															]
 														}
 													],
-													"sid": 964705032503397
+													"sid": 964705032503397,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 491002790234515,
+																	"parameters": {
+																		"variable": "WhiteTurn"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 649512215754787,
+																	"parameters": {
+																		"audio-file": "white-rabbit-jump",
+																		"loop": "not-looping",
+																		"volume": "0",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 530687522923351
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-boolean-eventvar",
+																	"objectClass": "System",
+																	"sid": 360360930523147,
+																	"parameters": {
+																		"variable": "WhiteTurn"
+																	},
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 580641991376247,
+																	"parameters": {
+																		"audio-file": "black-rabbit-jump",
+																		"loop": "not-looping",
+																		"volume": "0",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 598760555528576
+														},
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "set-animation",
+																	"objectClass": "Rabbit",
+																	"sid": 147934669365936,
+																	"parameters": {
+																		"animation": "\"Jump\"",
+																		"from": "beginning"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 791816045050849,
+																	"parameters": {
+																		"seconds": "0.5"
+																	}
+																},
+																{
+																	"id": "simulate-control",
+																	"objectClass": "Rabbit",
+																	"sid": 707227695362924,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"control": "left"
+																	}
+																},
+																{
+																	"callFunction": "ResolveIn",
+																	"sid": 234214652295303,
+																	"parameters": [
+																		"ShortActionDelay"
+																	]
+																}
+															],
+															"sid": 124279207258325
+														}
+													]
 												},
 												{
 													"eventType": "block",
@@ -4323,6 +4539,17 @@
 							],
 							"actions": [
 								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 170949750028844,
+									"parameters": {
+										"audio-file": "food-eating",
+										"loop": "not-looping",
+										"volume": "-5",
+										"tag-optional": "\"\""
+									}
+								},
+								{
 									"id": "set-group-active",
 									"objectClass": "System",
 									"sid": 962941098903535,
@@ -4841,6 +5068,17 @@
 																"animation": "\"Hurt\"",
 																"from": "beginning"
 															}
+														},
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 799845312662569,
+															"parameters": {
+																"audio-file": "white-rabbit-hurt",
+																"loop": "not-looping",
+																"volume": "-5",
+																"tag-optional": "\"falling\""
+															}
 														}
 													],
 													"sid": 691457724949053,
@@ -4887,6 +5125,17 @@
 															"parameters": {
 																"animation": "\"Hurt\"",
 																"from": "beginning"
+															}
+														},
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 137343801740938,
+															"parameters": {
+																"audio-file": "black-rabbit-hurt",
+																"loop": "not-looping",
+																"volume": "-5",
+																"tag-optional": "\"falling\""
 															}
 														}
 													],

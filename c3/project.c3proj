@@ -193,6 +193,96 @@
 					"name": "tud.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 465626644703828
+				},
+				{
+					"name": "black-rabbit-jump.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 563037184760650
+				},
+				{
+					"name": "white-rabbit-jump.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 217371597869551
+				},
+				{
+					"name": "black-rabbit-attack.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 780928427141441
+				},
+				{
+					"name": "black-rabbit-hurt.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 344987229850649
+				},
+				{
+					"name": "white-rabbit-attack.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 539532239914084
+				},
+				{
+					"name": "white-rabbit-hurt.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 310741017673066
+				},
+				{
+					"name": "whiterabbit-switch.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 497585175833730
+				},
+				{
+					"name": "button-play.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 603671866800248
+				},
+				{
+					"name": "button-press-1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 254204359747218
+				},
+				{
+					"name": "button-press-2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 269201410346477
+				},
+				{
+					"name": "coin-pickup.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 772677080423170
+				},
+				{
+					"name": "coin-putdown.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 524811346593405
+				},
+				{
+					"name": "food-drop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 691924912118083
+				},
+				{
+					"name": "food-eating.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 182944495249571
+				},
+				{
+					"name": "food-eating-1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 758420359545141
+				},
+				{
+					"name": "food-swap.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 856985984683383
+				},
+				{
+					"name": "game-over-1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 933792256075393
+				},
+				{
+					"name": "level-start.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 400546826878239
 				}
 			],
 			"subfolders": []
