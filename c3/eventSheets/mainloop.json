@@ -2312,9 +2312,9 @@
 										{
 											"id": "set-group-active",
 											"objectClass": "System",
-											"sid": 309745177218032,
+											"sid": 570523776619296,
 											"parameters": {
-												"group-name": "\"Resolve Combos\"",
+												"group-name": "\"Compact Pawns\"",
 												"state": "activated"
 											}
 										},
@@ -2545,58 +2545,180 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Compact Pawns",
+					"description": "",
+					"isActiveOnStart": false,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "SomethingHappened",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 487111513490914
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"callFunction": "UpdateBoardModel",
+									"sid": 860810399794087
+								}
+							],
+							"sid": 673986683481329
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each-ordered",
+									"objectClass": "System",
+									"sid": 312022527419680,
+									"parameters": {
+										"object": "Pawn",
+										"expression": "Pawn.Y",
+										"order": "descending"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 652315226823492,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 723312520424119,
+											"parameters": {
+												"first-value": "Pawn.TileMovement.GridY",
+												"comparison": 2,
+												"second-value": "BoardBottom"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 532288931584137,
+											"parameters": {
+												"first-value": "Board.At(Pawn.TileMovement.GridX, Pawn.TileMovement.GridY + 1, TypesIndex)",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Pawn",
+											"sid": 704102826750474,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"control": "down"
+											}
+										},
+										{
+											"id": "set-at-xyz",
+											"objectClass": "Board",
+											"sid": 392971016999772,
+											"parameters": {
+												"x": "Pawn.TileMovement.GridX",
+												"y": "Pawn.TileMovement.GridY",
+												"z": "TypesIndex",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 640516130705487,
+											"parameters": {
+												"variable": "SomethingHappened",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 908315220748037
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 496291741071249,
+									"parameters": {
+										"variable": "SomethingHappened"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 720500515689695,
+									"parameters": {
+										"group-name": "\"Compact Pawns\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 295048129350724,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 362385816347279,
+									"parameters": {
+										"group-name": "\"Resolve Combos\"",
+										"state": "activated"
+									}
+								}
+							],
+							"sid": 614860320033683
+						}
+					],
+					"sid": 853459371478265
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Resolve Combos",
 					"description": "",
 					"isActiveOnStart": false,
 					"children": [
 						{
+							"eventType": "variable",
+							"name": "SomethingHappened",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 629925026317550
+						},
+						{
 							"eventType": "block",
-							"conditions": [
-								{
-									"id": "for-each",
-									"objectClass": "System",
-									"sid": 768282148723544,
-									"parameters": {
-										"object": "Pawn"
-									}
-								}
-							],
+							"conditions": [],
 							"actions": [
 								{
-									"id": "set-at-xyz",
-									"objectClass": "Board",
-									"sid": 370049354530776,
-									"parameters": {
-										"x": "Pawn.TileMovement.GridX",
-										"y": "Pawn.TileMovement.GridY",
-										"z": "TypesIndex",
-										"value": "Pawn.ObjectTypeName"
-									}
-								},
-								{
-									"id": "set-at-xyz",
-									"objectClass": "Board",
-									"sid": 710094330643822,
-									"parameters": {
-										"x": "Pawn.TileMovement.GridX",
-										"y": "Pawn.TileMovement.GridY",
-										"z": "UIDsIndex",
-										"value": "Pawn.UID"
-									}
-								},
-								{
-									"id": "set-at-xyz",
-									"objectClass": "Board",
-									"sid": 346478813172888,
-									"parameters": {
-										"x": "Pawn.TileMovement.GridX",
-										"y": "Pawn.TileMovement.GridY",
-										"z": "CombosIndex",
-										"value": "\"N\""
-									}
+									"callFunction": "UpdateBoardModel",
+									"sid": 953013344796961
 								}
 							],
-							"sid": 597870717628014
+							"sid": 436958382155587
 						},
 						{
 							"eventType": "block",
@@ -2771,12 +2893,94 @@
 										{
 											"id": "destroy",
 											"objectClass": "Pawn",
-											"sid": 555781014825346
+											"sid": 577963386261509
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 876538139332431,
+											"parameters": {
+												"variable": "SomethingHappened",
+												"value": "true"
+											}
 										}
 									],
 									"sid": 442006496808030
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 323977865962202,
+									"parameters": {
+										"variable": "SomethingHappened"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 962941098903535,
+									"parameters": {
+										"group-name": "\"Resolve Combos\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 780444488701912,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 744357211064601,
+									"parameters": {
+										"group-name": "\"Compact Pawns\"",
+										"state": "activated"
+									}
+								}
+							],
+							"sid": 849296997419530
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 249203956689381
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 196646664930215,
+									"parameters": {
+										"group-name": "\"Resolve Combos\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 154149603360315,
+									"parameters": {
+										"group-name": "\"Advance to Next Token\"",
+										"state": "activated"
+									}
+								}
+							],
+							"sid": 641154534312030
 						}
 					],
 					"sid": 651889959606607
@@ -2987,6 +3191,82 @@
 						}
 					],
 					"sid": 874158367781036
+				},
+				{
+					"functionName": "UpdateBoardModel",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 402046264158995
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "clear",
+							"objectClass": "Board",
+							"sid": 536067663361605,
+							"parameters": {
+								"value": "0"
+							}
+						}
+					],
+					"sid": 649368332587048
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 706264949603992,
+							"parameters": {
+								"object": "Pawn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-at-xyz",
+							"objectClass": "Board",
+							"sid": 256243276660098,
+							"parameters": {
+								"x": "Pawn.TileMovement.GridX",
+								"y": "Pawn.TileMovement.GridY",
+								"z": "TypesIndex",
+								"value": "Pawn.ObjectTypeName"
+							}
+						},
+						{
+							"id": "set-at-xyz",
+							"objectClass": "Board",
+							"sid": 275974969313983,
+							"parameters": {
+								"x": "Pawn.TileMovement.GridX",
+								"y": "Pawn.TileMovement.GridY",
+								"z": "UIDsIndex",
+								"value": "Pawn.UID"
+							}
+						},
+						{
+							"id": "set-at-xyz",
+							"objectClass": "Board",
+							"sid": 598060303809316,
+							"parameters": {
+								"x": "Pawn.TileMovement.GridX",
+								"y": "Pawn.TileMovement.GridY",
+								"z": "CombosIndex",
+								"value": "\"N\""
+							}
+						}
+					],
+					"sid": 603716317642730
 				}
 			],
 			"sid": 640630344879882
