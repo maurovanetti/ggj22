@@ -1500,13 +1500,11 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-instance-variable",
+											"id": "is-boolean-instance-variable-set",
 											"objectClass": "Token",
-											"sid": 396004205406505,
+											"sid": 877150765099123,
 											"parameters": {
-												"instance-variable": "Movement",
-												"comparison": 0,
-												"value": "0"
+												"instance-variable": "Attack"
 											}
 										}
 									],
@@ -1519,7 +1517,144 @@
 											]
 										}
 									],
-									"sid": 435049607863593
+									"sid": 435049607863593,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 463237886065590,
+													"parameters": {
+														"variable": "WhiteTurn"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "DestroyPawn",
+													"sid": 724400811004173,
+													"parameters": [
+														"Rabbit.TileMovement.GridX",
+														"Rabbit.TileMovement.GridY - 1"
+													]
+												},
+												{
+													"callFunction": "DestroyPawn",
+													"sid": 375683153652318,
+													"parameters": [
+														"Rabbit.TileMovement.GridX",
+														"Rabbit.TileMovement.GridY - 2"
+													]
+												}
+											],
+											"sid": 200055087522065
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 284917105021963
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "DestroyPawn",
+													"sid": 644514664235774,
+													"parameters": [
+														"Rabbit.TileMovement.GridX",
+														"Rabbit.TileMovement.GridY - 1"
+													]
+												},
+												{
+													"callFunction": "DestroyPawn",
+													"sid": 512628426503609,
+													"parameters": [
+														"Rabbit.TileMovement.GridX + 1",
+														"Rabbit.TileMovement.GridY - 1"
+													]
+												}
+											],
+											"sid": 527974192503169
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Token",
+											"sid": 130634376501728,
+											"parameters": {
+												"instance-variable": "Swap"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "ResolveIn",
+											"sid": 645883676384005,
+											"parameters": [
+												"1"
+											]
+										}
+									],
+									"sid": 790810183013660,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 445570956580434,
+													"parameters": {
+														"variable": "WhiteTurn"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "SwapPawns",
+													"sid": 719290368436733,
+													"parameters": [
+														"Rabbit.TileMovement.GridX",
+														"Rabbit.TileMovement.GridY - 1",
+														"Rabbit.TileMovement.GridX",
+														"Rabbit.TileMovement.GridY - 2"
+													]
+												}
+											],
+											"sid": 454168803223477
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 520725270327308
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "SwapPawns",
+													"sid": 205204302125292,
+													"parameters": [
+														"Rabbit.TileMovement.GridX",
+														"Rabbit.TileMovement.GridY - 1",
+														"Rabbit.TileMovement.GridX + 1",
+														"Rabbit.TileMovement.GridY - 1"
+													]
+												}
+											],
+											"sid": 836001106449995
+										}
+									]
 								},
 								{
 									"eventType": "block",
@@ -2109,6 +2244,213 @@
 								}
 							],
 							"sid": 127505856155211
+						},
+						{
+							"functionName": "DestroyPawn",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "TileX",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 424584829002733
+								},
+								{
+									"name": "TileY",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 278350458531143
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 280680518536314,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 923818414552643,
+											"parameters": {
+												"object": "Pawn"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 228769733829102,
+											"parameters": {
+												"first-value": "Pawn.TileMovement.GridX",
+												"comparison": 0,
+												"second-value": "TileX"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 375957641702672,
+											"parameters": {
+												"first-value": "Pawn.TileMovement.GridY",
+												"comparison": 0,
+												"second-value": "TileY"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Pawn",
+											"sid": 322214261281105
+										}
+									],
+									"sid": 693962359019076
+								}
+							]
+						},
+						{
+							"functionName": "SwapPawns",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "TileX1",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 280316148284034
+								},
+								{
+									"name": "TileY1",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 738291419673705
+								},
+								{
+									"name": "TileX2",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 626151105930891
+								},
+								{
+									"name": "TileY2",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 212211949259727
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 454461059746121,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 964201098287394,
+											"parameters": {
+												"object": "Pawn"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 137787410872274,
+											"parameters": {
+												"first-value": "Pawn.TileMovement.GridX",
+												"comparison": 0,
+												"second-value": "TileX1"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 871785897736221,
+											"parameters": {
+												"first-value": "Pawn.TileMovement.GridY",
+												"comparison": 0,
+												"second-value": "TileY1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-grid-position",
+											"objectClass": "Pawn",
+											"sid": 309196703231133,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"x": "TileX2",
+												"y": "TileY2",
+												"instant": "animate"
+											}
+										}
+									],
+									"sid": 510258897194105
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 911541331023774,
+											"parameters": {
+												"object": "Pawn"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 386599276745420,
+											"parameters": {
+												"first-value": "Pawn.TileMovement.GridX",
+												"comparison": 0,
+												"second-value": "TileX2"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 283178315287577,
+											"parameters": {
+												"first-value": "Pawn.TileMovement.GridY",
+												"comparison": 0,
+												"second-value": "TileY2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-grid-position",
+											"objectClass": "Pawn",
+											"sid": 446992166768536,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"x": "TileX1",
+												"y": "TileY1",
+												"instant": "animate"
+											}
+										}
+									],
+									"sid": 756163074180804
+								}
+							]
 						}
 					],
 					"sid": 793155243493462
