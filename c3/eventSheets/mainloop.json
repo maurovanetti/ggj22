@@ -480,6 +480,572 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Draw Tokens",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "NeedToRedraw",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 593829593287354
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 728692502958990,
+									"parameters": {
+										"object": "TokenPair"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 691971141798144,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-children",
+											"objectClass": "TokenPair",
+											"sid": 939655383389417,
+											"parameters": {
+												"child": "Token",
+												"which": "own"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 611204129504633,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 989497613479875,
+													"parameters": {
+														"object": "Token"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "SpawnToken",
+													"sid": 834059247828454,
+													"parameters": [
+														"Token.X",
+														"Token.Y",
+														"TokenPair.UID"
+													]
+												},
+												{
+													"id": "destroy",
+													"objectClass": "Token",
+													"sid": 874608789737681
+												},
+												{
+													"id": "remove-child",
+													"objectClass": "TokenPair",
+													"sid": 404746158311298,
+													"parameters": {
+														"child": "Token"
+													}
+												}
+											],
+											"sid": 389941866986617
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "variable",
+							"name": "ValidPair",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 547744474091572
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 175335640473964,
+									"parameters": {
+										"object": "TokenPair"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 311548821190776,
+									"parameters": {
+										"variable": "ValidPair",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 912230235310911,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-children",
+											"objectClass": "TokenPair",
+											"sid": 288680307661786,
+											"parameters": {
+												"child": "Token",
+												"which": "own"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-visible",
+											"objectClass": "Token",
+											"sid": 380481358913295,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 599383179663477,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Token",
+													"sid": 428851263885134,
+													"parameters": {
+														"instance-variable": "Movement",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 264533606719451,
+													"parameters": {
+														"variable": "ValidPair",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 641075461808791
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 733225563494418,
+											"parameters": {
+												"variable": "ValidPair"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 379432438591065,
+											"parameters": {
+												"variable": "NeedToRedraw",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 978982250861032
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 432486083014499,
+									"parameters": {
+										"variable": "NeedToRedraw"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 133410991799831,
+									"parameters": {
+										"group-name": "\"Draw Tokens\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 928963617670373,
+									"parameters": {
+										"seconds": "0.5"
+									}
+								},
+								{
+									"callFunction": "PaintTokens",
+									"sid": 344424236154181
+								},
+								{
+									"id": "set-scale",
+									"objectClass": "Token",
+									"sid": 408537503877696,
+									"parameters": {
+										"scale": "0"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Token",
+									"sid": 307732026355966,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Token",
+									"sid": 483757865864045,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetScaleX",
+										"end-value": "1",
+										"time": "0.5",
+										"ease": "easeoutelastic",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "Token",
+									"sid": 179068010240870,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "offsetScaleY",
+										"end-value": "1",
+										"time": "0.5",
+										"ease": "easeoutelastic",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no"
+									}
+								}
+							],
+							"sid": 635330122805653
+						},
+						{
+							"functionName": "SpawnToken",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "X",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 297425450307786
+								},
+								{
+									"name": "Y",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 988001940529079
+								},
+								{
+									"name": "TokenPairUID",
+									"type": "number",
+									"initialValue": "-1",
+									"comment": "",
+									"sid": 210095311711140
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 783824750443456,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "RandomValue",
+									"type": "number",
+									"initialValue": "-1",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 609570984315022
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 196752185880604,
+											"parameters": {
+												"variable": "RandomValue",
+												"value": "random(100)"
+											}
+										}
+									],
+									"sid": 903784333860650
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "TokenPair",
+											"sid": 793453402493453,
+											"parameters": {
+												"unique-id": "TokenPairUID"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 168662334369729,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 217974784395007,
+													"parameters": {
+														"first-value": "RandomValue",
+														"comparison": 2,
+														"second-value": "25"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 806125884423630,
+													"parameters": {
+														"object-to-create": "♥Token",
+														"layer": "\"Tokens\"",
+														"x": "X",
+														"y": "Y",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "add-child",
+													"objectClass": "TokenPair",
+													"sid": 550210217612174,
+													"parameters": {
+														"child": "♥Token",
+														"transform-x": false,
+														"transform-y": false,
+														"transform-w": false,
+														"transform-h": false,
+														"transform-a": false,
+														"transform-z-elevation": false,
+														"destroy-with-parent": true
+													}
+												}
+											],
+											"sid": 824841942073239
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 249963361413326
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 481153400784506,
+													"parameters": {
+														"first-value": "RandomValue",
+														"comparison": 2,
+														"second-value": "50"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 912041812568522,
+													"parameters": {
+														"object-to-create": "♦Token",
+														"layer": "\"Tokens\"",
+														"x": "X",
+														"y": "Y",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "add-child",
+													"objectClass": "TokenPair",
+													"sid": 447482905406526,
+													"parameters": {
+														"child": "♦Token",
+														"transform-x": false,
+														"transform-y": false,
+														"transform-w": false,
+														"transform-h": false,
+														"transform-a": false,
+														"transform-z-elevation": false,
+														"destroy-with-parent": true
+													}
+												}
+											],
+											"sid": 601859444490021
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 579227252447656
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 516158406921878,
+													"parameters": {
+														"first-value": "RandomValue",
+														"comparison": 2,
+														"second-value": "75"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 216568697125407,
+													"parameters": {
+														"object-to-create": "♣Token",
+														"layer": "\"Tokens\"",
+														"x": "X",
+														"y": "Y",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "add-child",
+													"objectClass": "TokenPair",
+													"sid": 345410057031262,
+													"parameters": {
+														"child": "♣Token",
+														"transform-x": false,
+														"transform-y": false,
+														"transform-w": false,
+														"transform-h": false,
+														"transform-a": false,
+														"transform-z-elevation": false,
+														"destroy-with-parent": true
+													}
+												}
+											],
+											"sid": 704475623442384
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 459925294793610
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 988709083626290,
+													"parameters": {
+														"object-to-create": "♠Token",
+														"layer": "\"Tokens\"",
+														"x": "X",
+														"y": "Y",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "add-child",
+													"objectClass": "TokenPair",
+													"sid": 453622746141953,
+													"parameters": {
+														"child": "♠Token",
+														"transform-x": false,
+														"transform-y": false,
+														"transform-w": false,
+														"transform-h": false,
+														"transform-a": false,
+														"transform-z-elevation": false,
+														"destroy-with-parent": true
+													}
+												}
+											],
+											"sid": 107360492751303
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [],
+									"sid": 266462399018830
+								}
+							]
+						}
+					],
+					"sid": 617375939339260
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Token Drag & Drop",
 					"description": "",
 					"isActiveOnStart": true,
@@ -3200,6 +3766,15 @@
 									"sid": 588543439774346,
 									"parameters": {
 										"group-name": "\"Plan\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 857022888292413,
+									"parameters": {
+										"group-name": "\"Draw Tokens\"",
 										"state": "activated"
 									}
 								},
