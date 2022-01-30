@@ -2,6 +2,10 @@
 	"name": "MainLoop",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Debug"
+		},
+		{
 			"eventType": "variable",
 			"name": "BoardLeft",
 			"type": "number",
@@ -295,6 +299,190 @@
 			]
 		},
 		{
+			"functionName": "IsTallColumn",
+			"functionDescription": "\"Y\" if reaches BoardTop",
+			"functionCategory": "",
+			"functionReturnType": "string",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "GridX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 469078545316843
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-function-return-value",
+					"objectClass": "Functions",
+					"sid": 888233828672352,
+					"parameters": {
+						"value": "\"N\""
+					}
+				}
+			],
+			"sid": 880381283253191,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 521197604053153,
+							"parameters": {
+								"object": "Pawn"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 544022262678197,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 114798725491436,
+									"parameters": {
+										"first-value": "Pawn.TileMovement.GridX",
+										"comparison": 0,
+										"second-value": "GridX"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 137184757449076,
+									"parameters": {
+										"first-value": "Pawn.TileMovement.GridY",
+										"comparison": 0,
+										"second-value": "BoardTop"
+									}
+								},
+								{
+									"id": "is-moving",
+									"objectClass": "Pawn",
+									"sid": 528744606194873,
+									"behaviorType": "TileMovement",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 863038541283416,
+									"parameters": {
+										"value": "\"Y\""
+									}
+								},
+								{
+									"id": "stop-loop",
+									"objectClass": "System",
+									"sid": 515460231138875
+								}
+							],
+							"sid": 924692055781189
+						}
+					]
+				}
+			]
+		},
+		{
+			"functionName": "HighlightDangerousPreviews",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 111408968424092,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 653623789200800,
+							"parameters": {
+								"object": "Pawn"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Pawn",
+							"sid": 673364229007116,
+							"parameters": {
+								"instance-variable": "Preview"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 175424150432636,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 513089624331524,
+									"parameters": {
+										"first-value": "Functions.IsTallColumn(Pawn.TileMovement.GridX)",
+										"comparison": 0,
+										"second-value": "\"Y\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-active",
+									"objectClass": "Pawn",
+									"sid": 393469081075142,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "active"
+									}
+								}
+							],
+							"sid": 837480977053558
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 643740040185701
+								}
+							],
+							"actions": [
+								{
+									"id": "set-active",
+									"objectClass": "Pawn",
+									"sid": 365771040338417,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								}
+							],
+							"sid": 766647098873965
+						}
+					]
+				}
+			]
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Initialization",
@@ -355,6 +543,15 @@
 								"loop": "looping",
 								"volume": "-30",
 								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 605507241167591,
+							"parameters": {
+								"group-name": "\"Preview New Line\"",
+								"state": "activated"
 							}
 						}
 					],
@@ -800,7 +997,36 @@
 											}
 										}
 									],
-									"sid": 309944104288391
+									"sid": 309944104288391,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 478593044502638,
+													"parameters": {
+														"first-value": "Functions.IsTallColumn(TileX)",
+														"comparison": 0,
+														"second-value": "\"Y\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-active",
+													"objectClass": "Pawn",
+													"sid": 982708837406503,
+													"behaviorType": "Sine",
+													"parameters": {
+														"state": "active"
+													}
+												}
+											],
+											"sid": 439094074497267
+										}
+									]
 								}
 							]
 						}
@@ -4235,6 +4461,15 @@
 											}
 										},
 										{
+											"id": "set-active",
+											"objectClass": "Pawn",
+											"sid": 601874357649604,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "inactive"
+											}
+										},
+										{
 											"id": "set-at-xyz",
 											"objectClass": "Board",
 											"sid": 392971016999772,
@@ -4301,6 +4536,23 @@
 								}
 							],
 							"sid": 614860320033683
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 885308786884557
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "HighlightDangerousPreviews",
+									"sid": 500963372051311
+								}
+							],
+							"sid": 398548180586882
 						}
 					],
 					"sid": 853459371478265

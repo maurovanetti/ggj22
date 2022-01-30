@@ -138,13 +138,37 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 100745436211999,
+					"sid": 894986830892946,
 					"parameters": {
-						"layout": "Level"
+						"layout": "Start"
 					}
 				}
 			],
 			"sid": 937289751653659
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 954485265210125,
+					"parameters": {
+						"key": 77
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-silent",
+					"objectClass": "Audio",
+					"sid": 516382365658577,
+					"parameters": {
+						"mode": "toggle-silent"
+					}
+				}
+			],
+			"sid": 269869310376385
 		}
 	],
 	"sid": 326254930301652

@@ -15,6 +15,11 @@
 			"behaviorId": "TileMovement",
 			"name": "TileMovement",
 			"sid": 669544550340605
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 646096328250826
 		}
 	],
 	"effectTypes": [],
