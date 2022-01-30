@@ -139,7 +139,8 @@
 			"RabbitAttackArea",
 			"DangerArea",
 			"gameover",
-			"TitleScreen"
+			"TitleScreen",
+			"CoinOrder"
 		],
 		"subfolders": []
 	},
