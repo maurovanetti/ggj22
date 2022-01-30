@@ -1403,6 +1403,14 @@
 										"variable": "ActiveTokenUID",
 										"value": "Token.UID"
 									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "TokenSocket",
+									"sid": 677022833959787,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 554706560415245,
@@ -1475,6 +1483,14 @@
 									"parameters": {
 										"variable": "ActiveTokenPairUID",
 										"value": "-1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "TokenSocket",
+									"sid": 614846041024869,
+									"parameters": {
+										"visibility": "invisible"
 									}
 								},
 								{

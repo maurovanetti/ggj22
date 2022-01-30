@@ -4,21 +4,39 @@
 	"sid": 323416419060375,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 410185506290530
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 64,
-						"height": 64,
+						"width": 128,
+						"height": 128,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4295751,
+						"imageSpriteId": 8845509,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0,
+								0.9946236559139785,
+								0.5,
+								0.5,
+								0.9946236559139785,
+								0,
+								0.5
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}

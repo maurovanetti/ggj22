@@ -72,6 +72,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
 			"author": "Scirra",
