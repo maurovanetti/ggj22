@@ -1,0 +1,17 @@
+{
+	"name": "Areas",
+	"plugin-id": "Sprite",
+	"sid": 740156078771210,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "TileMovement",
+			"name": "TileMovement",
+			"sid": 888204613216846
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"RabbitAttackArea"
+	]
+}

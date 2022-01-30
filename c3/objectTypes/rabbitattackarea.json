@@ -1,0 +1,70 @@
+{
+	"name": "RabbitAttackArea",
+	"plugin-id": "Sprite",
+	"sid": 159701694295306,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "DeltaX",
+			"type": "number",
+			"desc": "",
+			"sid": 726472045352868
+		},
+		{
+			"name": "DeltaY",
+			"type": "number",
+			"desc": "",
+			"sid": 950158156235013
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 129,
+						"height": 257,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3109475,
+						"collisionPoly": {
+							"points": [
+								0.03875968992248062,
+								0.019455252918287938,
+								0.5,
+								0,
+								0.9534883720930233,
+								0.019455252918287938,
+								0.9767441860465116,
+								0.5,
+								0.9534883720930233,
+								0.9766536964980544,
+								0.5,
+								0.9961089494163424,
+								0.03875968992248062,
+								0.9766536964980544,
+								0.015503875968992248,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 117245373929749,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -53,6 +53,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "Lives",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 426735623498748
+		},
+		{
+			"eventType": "variable",
 			"name": "TypesIndex",
 			"type": "number",
 			"initialValue": "0",
@@ -70,16 +80,6 @@
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 883508632899448
-		},
-		{
-			"eventType": "variable",
-			"name": "Lives",
-			"type": "number",
-			"initialValue": "4",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 450327331456053
 		},
 		{
 			"eventType": "variable",
@@ -5219,6 +5219,44 @@
 				}
 			],
 			"sid": 864844941521465
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Attack Areas",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-parent",
+							"objectClass": "RabbitAttackArea",
+							"sid": 117523684213081,
+							"parameters": {
+								"parent": "Rabbit",
+								"which": "own"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-grid-position",
+							"objectClass": "RabbitAttackArea",
+							"sid": 471197518208804,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"x": "Rabbit.TileMovement.GridX + RabbitAttackArea.DeltaX",
+								"y": "Rabbit.TileMovement.GridY + RabbitAttackArea.DeltaY",
+								"instant": "instant"
+							}
+						}
+					],
+					"sid": 931629192757640
+				}
+			],
+			"sid": 452847348175050
 		}
 	],
 	"sid": 912314645175753

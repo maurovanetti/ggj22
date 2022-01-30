@@ -127,7 +127,8 @@
 			"GameOverMessage",
 			"Audio",
 			"Keyboard",
-			"Background"
+			"Background",
+			"RabbitAttackArea"
 		],
 		"subfolders": []
 	},
@@ -138,7 +139,8 @@
 			"Token",
 			"Pawn",
 			"Rabbit",
-			"Enemy"
+			"Enemy",
+			"Areas"
 		],
 		"subfolders": []
 	},
