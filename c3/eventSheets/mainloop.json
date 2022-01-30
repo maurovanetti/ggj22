@@ -3578,9 +3578,13 @@
 									],
 									"actions": [
 										{
-											"id": "destroy",
+											"id": "set-animation",
 											"objectClass": "Pawn",
-											"sid": 322214261281105
+											"sid": 214537486697919,
+											"parameters": {
+												"animation": "\"Gotcha\"",
+												"from": "beginning"
+											}
 										}
 									],
 									"sid": 693962359019076
@@ -4155,9 +4159,13 @@
 									],
 									"actions": [
 										{
-											"id": "destroy",
+											"id": "set-animation",
 											"objectClass": "Pawn",
-											"sid": 577963386261509
+											"sid": 526623758864248,
+											"parameters": {
+												"animation": "\"Gotcha\"",
+												"from": "beginning"
+											}
 										},
 										{
 											"id": "set-boolean-eventvar",
@@ -4606,6 +4614,7 @@
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 203555273678923,
+									"disabled": true,
 									"parameters": {
 										"seconds": "EndOfTurnDelay"
 									}
@@ -4667,7 +4676,17 @@
 													}
 												}
 											],
-											"actions": [],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Enemy",
+													"sid": 459524540579770,
+													"parameters": {
+														"animation": "\"Attack\"",
+														"from": "beginning"
+													}
+												}
+											],
 											"sid": 689697712854786,
 											"children": [
 												{
@@ -4962,7 +4981,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Idle Rabbits",
+			"title": "Animations' Defaults",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -4987,6 +5006,27 @@
 						}
 					],
 					"sid": 943261009219227
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Pawn",
+							"sid": 175543502948007,
+							"parameters": {
+								"animation": "\"Gotcha\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Pawn",
+							"sid": 208483736920119
+						}
+					],
+					"sid": 384452004975369
 				}
 			],
 			"sid": 864844941521465

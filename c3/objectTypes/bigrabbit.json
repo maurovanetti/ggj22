@@ -4027,7 +4027,7 @@
 				"name": "Hurt",
 				"isLooping": false,
 				"isPingPong": false,
-				"repeatCount": 1,
+				"repeatCount": 5,
 				"repeatTo": 0,
 				"speed": 8
 			},
