@@ -12,6 +12,7 @@
 	],
 	"effectTypes": [],
 	"members": [
-		"RabbitAttackArea"
+		"RabbitAttackArea",
+		"DangerArea"
 	]
 }

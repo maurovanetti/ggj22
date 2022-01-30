@@ -128,12 +128,21 @@
 			"Audio",
 			"Keyboard",
 			"Background",
-			"RabbitAttackArea"
+			"RabbitAttackArea",
+			"DangerArea"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"DangerArea",
+				"Wasp"
+			],
+			"selectMode": "normal"
+		}
+	],
 	"families": {
 		"items": [
 			"Token",

@@ -5254,6 +5254,89 @@
 						}
 					],
 					"sid": 931629192757640
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 773580525611770,
+							"parameters": {
+								"object": "Wasp"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 735892536904637,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 312602446066228,
+									"parameters": {
+										"first-value": "Wasp.TileMovement.GridY",
+										"comparison": 0,
+										"second-value": "BoardBottom"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-grid-position",
+									"objectClass": "DangerArea",
+									"sid": 610462667844883,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"x": "Wasp.TileMovement.GridX",
+										"y": "Wasp.TileMovement.GridY + 1",
+										"instant": "instant"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "DangerArea",
+									"sid": 749682825690424,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "DangerArea",
+									"sid": 875930131201313,
+									"parameters": {
+										"layer": "\"Danger\""
+									}
+								}
+							],
+							"sid": 143324874478468
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 813537213214216
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "DangerArea",
+									"sid": 385069058156844,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 424199385366574
+						}
+					]
 				}
 			],
 			"sid": 452847348175050
