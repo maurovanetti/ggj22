@@ -1530,15 +1530,7 @@
 											"sid": 844791580750238
 										}
 									],
-									"actions": [
-										{
-											"callFunction": "ResolveIn",
-											"sid": 242235958277321,
-											"parameters": [
-												"2"
-											]
-										}
-									],
+									"actions": [],
 									"sid": 978582675126738,
 									"children": [
 										{
@@ -1552,16 +1544,6 @@
 														"instance-variable": "Movement",
 														"comparison": 0,
 														"value": "1"
-													}
-												},
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 180958512052079,
-													"parameters": {
-														"first-value": "Rabbit.TileMovement.GridX",
-														"comparison": 2,
-														"second-value": "BoardRight"
 													}
 												}
 											],
@@ -1597,47 +1579,161 @@
 																"comparison": 0,
 																"second-value": "-2"
 															}
+														}
+													],
+													"actions": [
+														{
+															"type": "comment",
+															"text": "Big rabbit can only push"
+														}
+													],
+													"sid": 423106615744359,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 535739110508700,
+																	"parameters": {
+																		"first-value": "Rabbit.TileMovement.GridX",
+																		"comparison": 2,
+																		"second-value": "BoardRight - 2"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "simulate-control",
+																	"objectClass": "BigRabbit",
+																	"sid": 329836594720364,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"control": "right"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 498283756103632,
+																	"parameters": {
+																		"seconds": "0.2"
+																	}
+																},
+																{
+																	"id": "simulate-control",
+																	"objectClass": "SmallRabbit",
+																	"sid": 800361114686766,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"control": "right"
+																	}
+																},
+																{
+																	"callFunction": "ResolveIn",
+																	"sid": 674925209202889,
+																	"parameters": [
+																		"2"
+																	]
+																}
+															],
+															"sid": 246313417136722
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 990671782287092
+														},
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 925799177354682,
+															"parameters": {
+																"variable": "WhiteTurn"
+															}
 														},
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 662793108891540,
+															"sid": 792955224426673,
 															"parameters": {
-																"first-value": "BigRabbit.TileMovement.GridX",
-																"comparison": 2,
-																"second-value": "BoardRight - 1"
+																"first-value": "DeltaTiles",
+																"comparison": 0,
+																"second-value": "1"
 															}
 														}
 													],
 													"actions": [
 														{
-															"id": "simulate-control",
-															"objectClass": "BigRabbit",
-															"sid": 162485547331646,
-															"behaviorType": "TileMovement",
-															"parameters": {
-																"control": "right"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 901641996927613,
-															"parameters": {
-																"seconds": "0.2"
-															}
-														},
-														{
-															"id": "simulate-control",
-															"objectClass": "SmallRabbit",
-															"sid": 789485170032715,
-															"behaviorType": "TileMovement",
-															"parameters": {
-																"control": "right"
-															}
+															"type": "comment",
+															"text": "White rabbit can only jump over"
 														}
 													],
-													"sid": 423106615744359
+													"sid": 765367584449568,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 319538443870661,
+																	"parameters": {
+																		"first-value": "Rabbit.TileMovement.GridX",
+																		"comparison": 2,
+																		"second-value": "BoardRight - 2"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-grid-position",
+																	"objectClass": "SmallRabbit",
+																	"sid": 796141159367497,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"x": "BigRabbit.TileMovement.GridX + 2",
+																		"y": "SmallRabbit.TileMovement.GridY",
+																		"instant": "animate"
+																	}
+																},
+																{
+																	"callFunction": "ResolveIn",
+																	"sid": 681294098290701,
+																	"parameters": [
+																		"2"
+																	]
+																}
+															],
+															"sid": 285800306433257
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 391084411292684
+																}
+															],
+															"actions": [
+																{
+																	"callFunction": "ResolveIn",
+																	"sid": 528936154479164,
+																	"parameters": [
+																		"1"
+																	]
+																}
+															],
+															"sid": 290992997231294
+														}
+													]
 												},
 												{
 													"eventType": "block",
@@ -1646,9 +1742,23 @@
 															"id": "else",
 															"objectClass": "System",
 															"sid": 377475488052175
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 175288541697546,
+															"parameters": {
+																"first-value": "Rabbit.TileMovement.GridX",
+																"comparison": 3,
+																"second-value": "BoardRight - Rabbit.Size"
+															}
 														}
 													],
 													"actions": [
+														{
+															"type": "comment",
+															"text": "Enough room to move"
+														},
 														{
 															"id": "simulate-control",
 															"objectClass": "Rabbit",
@@ -1657,9 +1767,36 @@
 															"parameters": {
 																"control": "right"
 															}
+														},
+														{
+															"callFunction": "ResolveIn",
+															"sid": 539432226793959,
+															"parameters": [
+																"1.5"
+															]
 														}
 													],
 													"sid": 968003115757148
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 425582026027619
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "ResolveIn",
+															"sid": 242761191034866,
+															"parameters": [
+																"1"
+															]
+														}
+													],
+													"sid": 493020302873918
 												}
 											]
 										},
@@ -1675,16 +1812,6 @@
 														"comparison": 0,
 														"value": "-1"
 													}
-												},
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 559599530879836,
-													"parameters": {
-														"first-value": "Rabbit.TileMovement.GridX",
-														"comparison": 4,
-														"second-value": "BoardLeft"
-													}
 												}
 											],
 											"actions": [],
@@ -1696,7 +1823,7 @@
 														{
 															"id": "compare-boolean-eventvar",
 															"objectClass": "System",
-															"sid": 444412714182131,
+															"sid": 896171918240014,
 															"parameters": {
 																"variable": "WhiteTurn"
 															},
@@ -1705,53 +1832,74 @@
 														{
 															"id": "compare-two-values",
 															"objectClass": "System",
-															"sid": 792789930269561,
+															"sid": 557311715059091,
 															"parameters": {
 																"first-value": "DeltaTiles",
 																"comparison": 0,
 																"second-value": "1"
 															}
-														},
-														{
-															"id": "compare-two-values",
-															"objectClass": "System",
-															"sid": 941410817136978,
-															"parameters": {
-																"first-value": "BigRabbit.TileMovement.GridX",
-																"comparison": 4,
-																"second-value": "BoardLeft + 1"
-															}
 														}
 													],
 													"actions": [
 														{
-															"id": "simulate-control",
-															"objectClass": "BigRabbit",
-															"sid": 647340919576784,
-															"behaviorType": "TileMovement",
-															"parameters": {
-																"control": "left"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 439945344864015,
-															"parameters": {
-																"seconds": "0.2"
-															}
-														},
-														{
-															"id": "simulate-control",
-															"objectClass": "SmallRabbit",
-															"sid": 904438282302638,
-															"behaviorType": "TileMovement",
-															"parameters": {
-																"control": "left"
-															}
+															"type": "comment",
+															"text": "Big rabbit can only push"
 														}
 													],
-													"sid": 402785435010551
+													"sid": 742399887650536,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 620813640960008,
+																	"parameters": {
+																		"first-value": "Rabbit.TileMovement.GridX",
+																		"comparison": 4,
+																		"second-value": "BoardLeft + 1"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "simulate-control",
+																	"objectClass": "BigRabbit",
+																	"sid": 647621790075892,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"control": "left"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 448228335598217,
+																	"parameters": {
+																		"seconds": "0.2"
+																	}
+																},
+																{
+																	"id": "simulate-control",
+																	"objectClass": "SmallRabbit",
+																	"sid": 663002138428780,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"control": "left"
+																	}
+																},
+																{
+																	"callFunction": "ResolveIn",
+																	"sid": 905573431789051,
+																	"parameters": [
+																		"2"
+																	]
+																}
+															],
+															"sid": 548942733847996
+														}
+													]
 												},
 												{
 													"eventType": "block",
@@ -1759,21 +1907,155 @@
 														{
 															"id": "else",
 															"objectClass": "System",
-															"sid": 743021027897468
+															"sid": 885045791081343
+														},
+														{
+															"id": "compare-boolean-eventvar",
+															"objectClass": "System",
+															"sid": 945593935372131,
+															"parameters": {
+																"variable": "WhiteTurn"
+															}
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 280937227249682,
+															"parameters": {
+																"first-value": "DeltaTiles",
+																"comparison": 0,
+																"second-value": "-2"
+															}
 														}
 													],
 													"actions": [
 														{
+															"type": "comment",
+															"text": "White rabbit can only jump over"
+														}
+													],
+													"sid": 897126263846344,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-two-values",
+																	"objectClass": "System",
+																	"sid": 295531739591157,
+																	"parameters": {
+																		"first-value": "Rabbit.TileMovement.GridX",
+																		"comparison": 4,
+																		"second-value": "BoardLeft + 2"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-grid-position",
+																	"objectClass": "SmallRabbit",
+																	"sid": 239349166115995,
+																	"behaviorType": "TileMovement",
+																	"parameters": {
+																		"x": "BigRabbit.TileMovement.GridX - 1",
+																		"y": "SmallRabbit.TileMovement.GridY",
+																		"instant": "animate"
+																	}
+																},
+																{
+																	"callFunction": "ResolveIn",
+																	"sid": 114856539626110,
+																	"parameters": [
+																		"2"
+																	]
+																}
+															],
+															"sid": 499047228531701
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 753038482455059
+																}
+															],
+															"actions": [
+																{
+																	"callFunction": "ResolveIn",
+																	"sid": 430791488053982,
+																	"parameters": [
+																		"1"
+																	]
+																}
+															],
+															"sid": 119330890438654
+														}
+													]
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 937659266662705
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 759868641238708,
+															"parameters": {
+																"first-value": "Rabbit.TileMovement.GridX",
+																"comparison": 5,
+																"second-value": "BoardLeft + 1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"type": "comment",
+															"text": "Enough room to move"
+														},
+														{
 															"id": "simulate-control",
 															"objectClass": "Rabbit",
-															"sid": 239431248647865,
+															"sid": 672802785591364,
 															"behaviorType": "TileMovement",
 															"parameters": {
 																"control": "left"
 															}
+														},
+														{
+															"callFunction": "ResolveIn",
+															"sid": 911515398192291,
+															"parameters": [
+																"1.5"
+															]
 														}
 													],
-													"sid": 835794963904068
+													"sid": 964705032503397
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 917567696694109
+														}
+													],
+													"actions": [
+														{
+															"callFunction": "ResolveIn",
+															"sid": 164672981052835,
+															"parameters": [
+																"1"
+															]
+														}
+													],
+													"sid": 427228403951944
 												}
 											]
 										}

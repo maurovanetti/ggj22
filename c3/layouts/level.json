@@ -1919,7 +1919,8 @@
 					},
 					"uid": 58,
 					"instanceVariables": {
-						"Small": false
+						"Small": false,
+						"Size": 2
 					},
 					"behaviors": {
 						"TileMovement": {
@@ -1993,7 +1994,8 @@
 					},
 					"uid": 57,
 					"instanceVariables": {
-						"Small": true
+						"Small": true,
+						"Size": 1
 					},
 					"behaviors": {
 						"TileMovement": {
