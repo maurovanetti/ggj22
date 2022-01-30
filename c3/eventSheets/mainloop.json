@@ -4639,9 +4639,9 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 209279150843033,
+									"sid": 454483040342099,
 									"parameters": {
-										"first-value": "Pawn.TileMovement.GridY",
+										"first-value": "Functions.TopLine",
 										"comparison": 2,
 										"second-value": "BoardTop"
 									}
@@ -4649,17 +4649,9 @@
 							],
 							"actions": [
 								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 132932607698617,
-									"parameters": {
-										"seconds": "EndOfGameDelay"
-									}
-								},
-								{
 									"id": "go-to-layout",
 									"objectClass": "System",
-									"sid": 143171101389276,
+									"sid": 587958418612880,
 									"parameters": {
 										"layout": "GameOver"
 									}
@@ -4886,6 +4878,91 @@
 													"isOrBlock": true
 												}
 											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"functionName": "TopLine",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "number",
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 951280683979342,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 965409668551214,
+											"parameters": {
+												"first-value": "Pawn.Count",
+												"comparison": 0,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-function-return-value",
+											"objectClass": "Functions",
+											"sid": 490277487329742,
+											"parameters": {
+												"value": "BoardBottom"
+											}
+										}
+									],
+									"sid": 784445597868825
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 732834710518830
+										}
+									],
+									"actions": [],
+									"sid": 262361382100006,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each-ordered",
+													"objectClass": "System",
+													"sid": 590772169922987,
+													"parameters": {
+														"object": "Pawn",
+														"expression": "Pawn.TileMovement.GridY",
+														"order": "ascending"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "stop-loop",
+													"objectClass": "System",
+													"sid": 277010556659857
+												},
+												{
+													"id": "set-function-return-value",
+													"objectClass": "Functions",
+													"sid": 390436641931177,
+													"parameters": {
+														"value": "Pawn.TileMovement.GridY"
+													}
+												}
+											],
+											"sid": 740785744168823
 										}
 									]
 								}
