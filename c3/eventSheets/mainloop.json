@@ -52,6 +52,36 @@
 			"sid": 983207427252198
 		},
 		{
+			"eventType": "variable",
+			"name": "TypesIndex",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Z value of the Board Array",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 294201417654441
+		},
+		{
+			"eventType": "variable",
+			"name": "UIDsIndex",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Z value of the Board Array",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 883508632899448
+		},
+		{
+			"eventType": "variable",
+			"name": "CombosIndex",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "Z value of the Board Array",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 834959351325366
+		},
+		{
 			"functionName": "PaintTokens",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -238,6 +268,20 @@
 						{
 							"callFunction": "PaintTokens",
 							"sid": 253053392301088
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Board",
+							"sid": 287015195519752,
+							"parameters": {
+								"width": "BoardRight + 1",
+								"height": "BoardBottom + 1",
+								"depth": "3"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "It's too large but who cares"
 						}
 					],
 					"sid": 803571646485178,
@@ -2223,27 +2267,70 @@
 									"parameters": {
 										"seconds": "Seconds"
 									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 976515886846322,
-									"parameters": {
-										"group-name": "\"Advance to Next Token\"",
-										"state": "activated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 911931416051346,
-									"parameters": {
-										"group-name": "\"Resolve Token\"",
-										"state": "deactivated"
-									}
 								}
 							],
-							"sid": 127505856155211
+							"sid": 127505856155211,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Pawn",
+											"sid": 934589209121066,
+											"behaviorType": "TileMovement"
+										},
+										{
+											"id": "is-moving",
+											"objectClass": "Rabbit",
+											"sid": 313223171889550,
+											"behaviorType": "TileMovement"
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "ResolveIn",
+											"sid": 233654221452247,
+											"parameters": [
+												"1"
+											]
+										}
+									],
+									"sid": 778673112034126,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 535280549702215
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 309745177218032,
+											"parameters": {
+												"group-name": "\"Resolve Combos\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 911931416051346,
+											"parameters": {
+												"group-name": "\"Resolve Token\"",
+												"state": "deactivated"
+											}
+										}
+									],
+									"sid": 779058552659465
+								}
+							]
 						},
 						{
 							"functionName": "DestroyPawn",
@@ -2454,6 +2541,245 @@
 						}
 					],
 					"sid": 793155243493462
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Resolve Combos",
+					"description": "",
+					"isActiveOnStart": false,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 768282148723544,
+									"parameters": {
+										"object": "Pawn"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xyz",
+									"objectClass": "Board",
+									"sid": 370049354530776,
+									"parameters": {
+										"x": "Pawn.TileMovement.GridX",
+										"y": "Pawn.TileMovement.GridY",
+										"z": "TypesIndex",
+										"value": "Pawn.ObjectTypeName"
+									}
+								},
+								{
+									"id": "set-at-xyz",
+									"objectClass": "Board",
+									"sid": 710094330643822,
+									"parameters": {
+										"x": "Pawn.TileMovement.GridX",
+										"y": "Pawn.TileMovement.GridY",
+										"z": "UIDsIndex",
+										"value": "Pawn.UID"
+									}
+								},
+								{
+									"id": "set-at-xyz",
+									"objectClass": "Board",
+									"sid": 346478813172888,
+									"parameters": {
+										"x": "Pawn.TileMovement.GridX",
+										"y": "Pawn.TileMovement.GridY",
+										"z": "CombosIndex",
+										"value": "\"N\""
+									}
+								}
+							],
+							"sid": 597870717628014
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each-element",
+									"objectClass": "Board",
+									"sid": 192383659509836,
+									"parameters": {
+										"axes": "xy"
+									}
+								},
+								{
+									"id": "compare-at-xyz",
+									"objectClass": "Board",
+									"sid": 740359537603700,
+									"parameters": {
+										"x": "Board.CurX",
+										"y": "Board.CurY",
+										"z": "TypesIndex",
+										"comparison": 0,
+										"value": "0"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 362387036884411,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "evaluate-expression",
+											"objectClass": "System",
+											"sid": 479971076323748,
+											"parameters": {
+												"value": "Board.At(Board.CurX,Board.CurY,TypesIndex) = Board.At(Board.CurX + 1,Board.CurY,TypesIndex) & Board.At(Board.CurX,Board.CurY,TypesIndex) = Board.At(Board.CurX + 2,Board.CurY,TypesIndex)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "Board",
+											"sid": 238996796115080,
+											"parameters": {
+												"x": "Board.CurX",
+												"y": "Board.CurY",
+												"z": "CombosIndex",
+												"value": "\"Y\""
+											}
+										},
+										{
+											"id": "set-at-xyz",
+											"objectClass": "Board",
+											"sid": 949360853973089,
+											"parameters": {
+												"x": "Board.CurX + 1",
+												"y": "Board.CurY",
+												"z": "CombosIndex",
+												"value": "\"Y\""
+											}
+										},
+										{
+											"id": "set-at-xyz",
+											"objectClass": "Board",
+											"sid": 743511675992584,
+											"parameters": {
+												"x": "Board.CurX + 2",
+												"y": "Board.CurY",
+												"z": "CombosIndex",
+												"value": "\"Y\""
+											}
+										}
+									],
+									"sid": 535504928819107,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "evaluate-expression",
+											"objectClass": "System",
+											"sid": 874728232995938,
+											"parameters": {
+												"value": "Board.At(Board.CurX,Board.CurY,TypesIndex) = Board.At(Board.CurX,Board.CurY + 1,TypesIndex) & Board.At(Board.CurX,Board.CurY,TypesIndex) = Board.At(Board.CurX,Board.CurY + 2,TypesIndex)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-at-xyz",
+											"objectClass": "Board",
+											"sid": 195149416466901,
+											"parameters": {
+												"x": "Board.CurX",
+												"y": "Board.CurY",
+												"z": "CombosIndex",
+												"value": "\"Y\""
+											}
+										},
+										{
+											"id": "set-at-xyz",
+											"objectClass": "Board",
+											"sid": 232180929735405,
+											"parameters": {
+												"x": "Board.CurX",
+												"y": "Board.CurY + 1",
+												"z": "CombosIndex",
+												"value": "\"Y\""
+											}
+										},
+										{
+											"id": "set-at-xyz",
+											"objectClass": "Board",
+											"sid": 998551339988591,
+											"parameters": {
+												"x": "Board.CurX",
+												"y": "Board.CurY + 2",
+												"z": "CombosIndex",
+												"value": "\"Y\""
+											}
+										}
+									],
+									"sid": 184074912488054,
+									"isOrBlock": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each-element",
+									"objectClass": "Board",
+									"sid": 415464102701022,
+									"parameters": {
+										"axes": "xy"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 233247126495755,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-at-xyz",
+											"objectClass": "Board",
+											"sid": 242823794925844,
+											"parameters": {
+												"x": "Board.CurX",
+												"y": "Board.CurY",
+												"z": "CombosIndex",
+												"comparison": 0,
+												"value": "\"Y\""
+											}
+										},
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Pawn",
+											"sid": 114379956927782,
+											"parameters": {
+												"unique-id": "Board.At(Board.CurX, Board.CurY, UIDsIndex)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Pawn",
+											"sid": 555781014825346
+										}
+									],
+									"sid": 442006496808030
+								}
+							]
+						}
+					],
+					"sid": 651889959606607
 				},
 				{
 					"eventType": "group",
