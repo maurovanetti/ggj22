@@ -2722,6 +2722,14 @@
 																	}
 																},
 																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 665901318048695,
+																	"parameters": {
+																		"seconds": "0.2"
+																	}
+																},
+																{
 																	"id": "simulate-control",
 																	"objectClass": "SmallRabbit",
 																	"sid": 800361114686766,
@@ -3074,6 +3082,14 @@
 																	"behaviorType": "TileMovement",
 																	"parameters": {
 																		"control": "left"
+																	}
+																},
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 339059910627687,
+																	"parameters": {
+																		"seconds": "0.2"
 																	}
 																},
 																{
@@ -4373,6 +4389,45 @@
 								{
 									"id": "else",
 									"objectClass": "System",
+									"sid": 710867346033974
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 209279150843033,
+									"parameters": {
+										"first-value": "Pawn.TileMovement.GridY",
+										"comparison": 2,
+										"second-value": "BoardTop"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 132932607698617,
+									"parameters": {
+										"seconds": "EndOfGameDelay"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 143171101389276,
+									"parameters": {
+										"layout": "GameOver"
+									}
+								}
+							],
+							"sid": 492144511373417
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
 									"sid": 871013237361676
 								}
 							],
@@ -4684,13 +4739,13 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Defeat Conditions",
+			"title": "Lives",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "variable",
-					"name": "EndOfGameDelay2",
+					"name": "EndOfGameDelay",
 					"type": "number",
 					"initialValue": "4",
 					"comment": "",
@@ -4770,7 +4825,7 @@
 							"objectClass": "System",
 							"sid": 658041065482619,
 							"parameters": {
-								"seconds": "EndOfGameDelay2"
+								"seconds": "EndOfGameDelay"
 							}
 						},
 						{
