@@ -5094,11 +5094,12 @@
 					],
 					"actions": [
 						{
-							"id": "set-visible",
+							"id": "set-animation",
 							"objectClass": "Life",
-							"sid": 658572840604347,
+							"sid": 470204276146810,
 							"parameters": {
-								"visibility": "invisible"
+								"animation": "\"Dead\"",
+								"from": "beginning"
 							}
 						}
 					],
@@ -5120,11 +5121,12 @@
 					],
 					"actions": [
 						{
-							"id": "set-visible",
+							"id": "set-animation",
 							"objectClass": "Life",
-							"sid": 231415564047869,
+							"sid": 379168932376165,
 							"parameters": {
-								"visibility": "visible"
+								"animation": "\"Alive\"",
+								"from": "beginning"
 							}
 						}
 					],
@@ -5216,6 +5218,30 @@
 						}
 					],
 					"sid": 384452004975369
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Life",
+							"sid": 252949677738111,
+							"parameters": {
+								"animation": "\"Dead\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Life",
+							"sid": 324661046999278,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 182804680855978
 				}
 			],
 			"sid": 864844941521465
