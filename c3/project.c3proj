@@ -129,7 +129,8 @@
 			"Keyboard",
 			"Background",
 			"RabbitAttackArea",
-			"DangerArea"
+			"DangerArea",
+			"gameover"
 		],
 		"subfolders": []
 	},
@@ -199,6 +200,11 @@
 					"name": "Bubutumwahwah.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 262279428747789
+				},
+				{
+					"name": "soundtrack-fast.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 110401244816656
 				}
 			],
 			"subfolders": []

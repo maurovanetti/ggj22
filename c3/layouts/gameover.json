@@ -7,35 +7,22 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "GameOverMessage",
+					"type": "gameover",
 					"properties": {
-						"text": "GAME OVER\n\n   X-(",
-						"enable-bbcode": true,
-						"font": "Franklin Gothic",
-						"size": 61,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
-						"wrapping": "word",
 						"initially-visible": true,
-						"origin": "top-left"
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
 					},
 					"uid": 37,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 294,
-						"y": 496,
-						"width": 449,
-						"height": 407,
+						"x": 0,
+						"y": 0,
+						"width": 1024,
+						"height": 1366,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -44,7 +31,7 @@
 							1,
 							1
 						],
-						"angle": 6.188518897892219,
+						"angle": 0,
 						"zElevation": 0
 					}
 				}

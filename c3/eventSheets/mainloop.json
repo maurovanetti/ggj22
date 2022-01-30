@@ -349,11 +349,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 540512699923246,
+							"sid": 558596025215754,
 							"parameters": {
-								"audio-file": "Bubutumwahwah",
+								"audio-file": "soundtrack-fast",
 								"loop": "looping",
-								"volume": "0",
+								"volume": "-30",
 								"tag-optional": "\"\""
 							}
 						}
