@@ -1977,9 +1977,56 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "is-visible",
+									"objectClass": "Go",
+									"sid": 546957083198014,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Go",
+									"sid": 767517318626977,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "start-animation",
+									"objectClass": "Go",
+									"sid": 795166004293680,
+									"parameters": {
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 368768236807215
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-animation-finished",
+									"objectClass": "Go",
+									"sid": 664299862521011
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "EndPlanning",
+									"sid": 230254084932306
+								}
+							],
+							"sid": 543769546550540
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 894142241570551,
+									"sid": 627188539208780,
 									"parameters": {
 										"mouse-button": "left",
 										"click-type": "clicked",
@@ -1989,9 +2036,26 @@
 							],
 							"actions": [
 								{
+									"callFunction": "EndPlanning",
+									"sid": 711422950893211
+								}
+							],
+							"sid": 106725974029597
+						},
+						{
+							"functionName": "EndPlanning",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [
+								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 723988433229534,
+									"sid": 686432853771278,
 									"parameters": {
 										"group-name": "\"Resolution\"",
 										"state": "activated"
@@ -2000,7 +2064,7 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 412293446708916,
+									"sid": 891673095095737,
 									"parameters": {
 										"group-name": "\"Initiate Resolution\"",
 										"state": "activated"
@@ -2009,7 +2073,7 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 532953612070544,
+									"sid": 702891182978620,
 									"parameters": {
 										"group-name": "\"Plan\"",
 										"state": "deactivated"
@@ -2018,13 +2082,13 @@
 								{
 									"id": "set-visible",
 									"objectClass": "Go",
-									"sid": 626904911283670,
+									"sid": 305967837294716,
 									"parameters": {
 										"visibility": "invisible"
 									}
 								}
 							],
-							"sid": 161602445921087
+							"sid": 477407291523727
 						}
 					],
 					"sid": 501929634043686
@@ -4489,14 +4553,6 @@
 									"id": "set-visible",
 									"objectClass": "Token",
 									"sid": 425005301693455,
-									"parameters": {
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "Go",
-									"sid": 633074927530895,
 									"parameters": {
 										"visibility": "visible"
 									}

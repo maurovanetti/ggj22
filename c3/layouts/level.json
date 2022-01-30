@@ -37,7 +37,66 @@
 			"name": "Background",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "Background",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 43,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1024,
+						"height": 1367,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TokenSocket",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 44,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -134,
+						"y": 421,
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 372209337207705,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -511,7 +570,7 @@
 					"type": "Go",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Go",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -520,11 +579,11 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 512,
-						"y": 1280,
-						"width": 400,
-						"height": 50,
-						"originX": 0.5,
+						"x": 255,
+						"y": 1237,
+						"width": 512,
+						"height": 128,
+						"originX": 0,
 						"originY": 0,
 						"color": [
 							1,
@@ -1108,7 +1167,7 @@
 						"bottom-margin": 3,
 						"edges": "tile",
 						"fill": "tile",
-						"initially-visible": true,
+						"initially-visible": false,
 						"origin": "bottom",
 						"seams": "overlap"
 					},
@@ -1148,7 +1207,7 @@
 						"bottom-margin": 3,
 						"edges": "tile",
 						"fill": "tile",
-						"initially-visible": true,
+						"initially-visible": false,
 						"origin": "bottom",
 						"seams": "overlap"
 					},
@@ -2161,8 +2220,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 285.7597652360796,
-						"y": 1276.7890626609326,
+						"x": 158,
+						"y": 1302,
 						"width": 29,
 						"height": 23,
 						"originX": 0.5517241379310345,
@@ -2192,8 +2251,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 314.4355463519691,
-						"y": 1261.4082030043005,
+						"x": 197,
+						"y": 1299,
 						"width": 29,
 						"height": 23,
 						"originX": 0.5517241379310345,
@@ -2223,8 +2282,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 350.5058587983248,
-						"y": 1265.0703124463557,
+						"x": 236,
+						"y": 1304,
 						"width": 29,
 						"height": 23,
 						"originX": 0.5517241379310345,
@@ -2291,7 +2350,7 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "word",
-						"initially-visible": true,
+						"initially-visible": false,
 						"origin": "top-left"
 					},
 					"uid": 14,

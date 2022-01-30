@@ -126,7 +126,8 @@
 			"Life",
 			"GameOverMessage",
 			"Audio",
-			"Keyboard"
+			"Keyboard",
+			"Background"
 		],
 		"subfolders": []
 	},
