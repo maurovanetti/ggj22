@@ -47,6 +47,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -108,7 +116,8 @@
 			"Berry",
 			"Wasp",
 			"Life",
-			"GameOverMessage"
+			"GameOverMessage",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -144,11 +153,33 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "plin.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 835396297806044
+				},
+				{
+					"name": "tud.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 465626644703828
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Bubutum.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 660196301472572
+				},
+				{
+					"name": "Bubutumwahwah.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 262279428747789
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

@@ -292,6 +292,17 @@
 						{
 							"type": "comment",
 							"text": "It's too large but who cares"
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 540512699923246,
+							"parameters": {
+								"audio-file": "Bubutumwahwah",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 803571646485178,
@@ -1384,6 +1395,17 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 578057033770416,
+									"parameters": {
+										"audio-file": "tud",
+										"loop": "not-looping",
+										"volume": "-10",
+										"tag-optional": "\"\""
+									}
+								},
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
