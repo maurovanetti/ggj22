@@ -140,7 +140,8 @@
 			"DangerArea",
 			"gameover",
 			"TitleScreen",
-			"CoinOrder"
+			"CoinOrder",
+			"QuestionMark"
 		],
 		"subfolders": []
 	},
