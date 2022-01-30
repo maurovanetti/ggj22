@@ -12,6 +12,33 @@
 			],
 			"actions": [
 				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 744452626404447,
+					"parameters": {
+						"group-name": "\"Initialization\"",
+						"state": "activated"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 347870026088442,
+					"parameters": {
+						"group-name": "\"Plan\"",
+						"state": "deactivated"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 767479678350021,
+					"parameters": {
+						"group-name": "\"Resolution\"",
+						"state": "deactivated"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 874682134851875,

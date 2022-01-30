@@ -4892,6 +4892,15 @@
 							],
 							"actions": [
 								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 779974586919761,
+									"parameters": {
+										"group-name": "\"Complete Resolution\"",
+										"state": "deactivated"
+									}
+								},
+								{
 									"id": "go-to-layout",
 									"objectClass": "System",
 									"sid": 587958418612880,
