@@ -480,6 +480,262 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Preview New Line",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "EnemyTileX",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 627057266450728
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 257313448426956,
+									"parameters": {
+										"variable": "EnemyTileX",
+										"value": "floor(random(BoardLeft, BoardRight + 1))"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 686795872785385,
+									"parameters": {
+										"object-to-create": "Wasp",
+										"layer": "\"Pawns\"",
+										"x": "0",
+										"y": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"callFunction": "EnterPawn",
+									"sid": 350515631023137,
+									"parameters": [
+										"Wasp.UID",
+										"EnemyTileX"
+									]
+								}
+							],
+							"sid": 174425713945500
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 174251957848987,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "BoardLeft",
+										"end-index": "BoardRight"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 808971192350276,
+									"parameters": {
+										"first-value": "loopindex",
+										"comparison": 1,
+										"second-value": "EnemyTileX"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 239015525880359,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 748346294561688,
+											"parameters": {
+												"first-value": "random(2)",
+												"comparison": 2,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 894073190901179,
+											"parameters": {
+												"object-to-create": "Carrot",
+												"layer": "\"Pawns\"",
+												"x": "0",
+												"y": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"callFunction": "EnterPawn",
+											"sid": 793517580913250,
+											"parameters": [
+												"Carrot.UID",
+												"loopindex"
+											]
+										}
+									],
+									"sid": 182828556106805
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 261539195372141
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 505608246550745,
+											"parameters": {
+												"object-to-create": "Berry",
+												"layer": "\"Pawns\"",
+												"x": "0",
+												"y": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"callFunction": "EnterPawn",
+											"sid": 990715946224065,
+											"parameters": [
+												"Berry.UID",
+												"loopindex"
+											]
+										}
+									],
+									"sid": 340794175027787
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 449563421892294,
+									"parameters": {
+										"group-name": "\"Preview New Line\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 914456687555655
+						},
+						{
+							"functionName": "EnterPawn",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "PawnUID",
+									"type": "number",
+									"initialValue": "-1",
+									"comment": "",
+									"sid": 697894414812720
+								},
+								{
+									"name": "TileX",
+									"type": "number",
+									"initialValue": "-1",
+									"comment": "",
+									"sid": 985412106522599
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 427704813819691,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Pawn",
+											"sid": 870118336179984,
+											"parameters": {
+												"unique-id": "PawnUID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-opacity",
+											"objectClass": "Pawn",
+											"sid": 661822008385061,
+											"parameters": {
+												"opacity": "33"
+											}
+										},
+										{
+											"id": "set-grid-position",
+											"objectClass": "Pawn",
+											"sid": 965961374846494,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"x": "TileX",
+												"y": "BoardTop - 3",
+												"instant": "instant"
+											}
+										},
+										{
+											"id": "set-grid-position",
+											"objectClass": "Pawn",
+											"sid": 749445354069910,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"x": "TileX",
+												"y": "BoardTop - 1",
+												"instant": "animate"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Pawn",
+											"sid": 882268719097558,
+											"parameters": {
+												"instance-variable": "Preview",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 309944104288391
+								}
+							]
+						}
+					],
+					"sid": 765124550788246
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Draw Tokens",
 					"description": "",
 					"isActiveOnStart": true,
@@ -3238,6 +3494,15 @@
 										"expression": "Pawn.Y",
 										"order": "descending"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Pawn",
+									"sid": 265645382042172,
+									"parameters": {
+										"instance-variable": "Preview"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [],
@@ -3649,18 +3914,60 @@
 					"children": [
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 714315938878821,
+									"parameters": {
+										"variable": "SequenceIndex",
+										"comparison": 5,
+										"value": "TokenPair.Count"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 539712957038374,
+									"parameters": {
+										"group-name": "\"Complete Resolution\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 505734922037570,
+									"parameters": {
+										"group-name": "\"Advance to Next Token\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 447600932245268
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 476571857203151
+								}
+							],
 							"actions": [
 								{
 									"id": "toggle-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 466182966292001,
+									"sid": 661787972946847,
 									"parameters": {
 										"variable": "WhiteTurn"
 									}
 								}
 							],
-							"sid": 619377566946189,
+							"sid": 577339109736756,
 							"children": [
 								{
 									"eventType": "block",
@@ -3668,7 +3975,7 @@
 										{
 											"id": "compare-boolean-eventvar",
 											"objectClass": "System",
-											"sid": 157385639841480,
+											"sid": 252677452451329,
 											"parameters": {
 												"variable": "WhiteTurn"
 											}
@@ -3678,14 +3985,14 @@
 										{
 											"id": "add-to-eventvar",
 											"objectClass": "System",
-											"sid": 681167636954452,
+											"sid": 264971433476633,
 											"parameters": {
 												"variable": "SequenceIndex",
 												"value": "1"
 											}
 										}
 									],
-									"sid": 586044378026776
+									"sid": 725440648979712
 								},
 								{
 									"eventType": "block",
@@ -3693,7 +4000,7 @@
 										{
 											"id": "compare-eventvar",
 											"objectClass": "System",
-											"sid": 993185613335548,
+											"sid": 454486786834706,
 											"parameters": {
 												"variable": "SequenceIndex",
 												"comparison": 5,
@@ -3705,14 +4012,14 @@
 										{
 											"id": "set-group-active",
 											"objectClass": "System",
-											"sid": 721463642855793,
+											"sid": 977343980695280,
 											"parameters": {
 												"group-name": "\"Complete Resolution\"",
 												"state": "activated"
 											}
 										}
 									],
-									"sid": 447943404478927
+									"sid": 274819133956054
 								},
 								{
 									"eventType": "block",
@@ -3720,61 +4027,61 @@
 										{
 											"id": "else",
 											"objectClass": "System",
-											"sid": 576784957430302
+											"sid": 560978600753151
 										}
 									],
 									"actions": [
 										{
 											"id": "set-group-active",
 											"objectClass": "System",
-											"sid": 870576600374615,
+											"sid": 316080424527388,
 											"parameters": {
 												"group-name": "\"Select Token\"",
 												"state": "activated"
 											}
 										}
 									],
-									"sid": 133956758152987
+									"sid": 206020681661809
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-active",
+											"objectClass": "Token",
+											"sid": 935377437874355,
+											"behaviorType": "Sine"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 477772159352868,
+											"parameters": {
+												"group-name": "\"Advance to Next Token\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"id": "set-active",
+											"objectClass": "Token",
+											"sid": 312455593085499,
+											"behaviorType": "Sine",
+											"parameters": {
+												"state": "inactive"
+											}
+										},
+										{
+											"id": "start-fade",
+											"objectClass": "Token",
+											"sid": 376191498110316,
+											"behaviorType": "Fade"
+										}
+									],
+									"sid": 174338718516258
 								}
 							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-active",
-									"objectClass": "Token",
-									"sid": 196513112971987,
-									"behaviorType": "Sine"
-								}
-							],
-							"actions": [
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 976339731059356,
-									"parameters": {
-										"group-name": "\"Advance to Next Token\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-active",
-									"objectClass": "Token",
-									"sid": 954975953633436,
-									"behaviorType": "Sine",
-									"parameters": {
-										"state": "inactive"
-									}
-								},
-								{
-									"id": "start-fade",
-									"objectClass": "Token",
-									"sid": 513573692566596,
-									"behaviorType": "Fade"
-								}
-							],
-							"sid": 311595472163806
 						}
 					],
 					"sid": 719915895720748
@@ -3798,7 +4105,64 @@
 						},
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Pawn",
+									"sid": 663103436221727,
+									"parameters": {
+										"instance-variable": "Preview"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Pawn",
+									"sid": 629574894129463,
+									"parameters": {
+										"instance-variable": "Preview",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Pawn",
+									"sid": 144327439684334,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 831976652508363,
+									"parameters": {
+										"group-name": "\"Compact Pawns\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 496781842558560,
+									"parameters": {
+										"group-name": "\"Complete Resolution\"",
+										"state": "deactivated"
+									}
+								}
+							],
+							"sid": 788693726068922
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 871013237361676
+								}
+							],
 							"actions": [
 								{
 									"id": "set-group-active",
@@ -3812,7 +4176,16 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 857022888292413,
+									"sid": 204445073946278,
+									"parameters": {
+										"group-name": "\"Preview New Line\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 428439229904300,
 									"parameters": {
 										"group-name": "\"Draw Tokens\"",
 										"state": "activated"
@@ -3903,6 +4276,15 @@
 									"parameters": {
 										"object": "Pawn"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Pawn",
+									"sid": 549080892457380,
+									"parameters": {
+										"instance-variable": "Preview"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [

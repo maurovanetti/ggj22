@@ -105,7 +105,8 @@
 			"♠Token",
 			"Go",
 			"Board",
-			"Berry"
+			"Berry",
+			"Wasp"
 		],
 		"subfolders": []
 	},
@@ -115,7 +116,8 @@
 		"items": [
 			"Token",
 			"Pawn",
-			"Rabbit"
+			"Rabbit",
+			"Enemy"
 		],
 		"subfolders": []
 	},

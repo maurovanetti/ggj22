@@ -2,7 +2,14 @@
 	"name": "Pawn",
 	"plugin-id": "Sprite",
 	"sid": 196085472012329,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Preview",
+			"type": "boolean",
+			"desc": "",
+			"sid": 888254566274954
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "TileMovement",
@@ -13,6 +20,7 @@
 	"effectTypes": [],
 	"members": [
 		"Carrot",
-		"Berry"
+		"Berry",
+		"Wasp"
 	]
 }

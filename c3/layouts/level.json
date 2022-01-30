@@ -112,7 +112,9 @@
 						"live-preview": false
 					},
 					"uid": 15,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -155,7 +157,9 @@
 						"live-preview": false
 					},
 					"uid": 16,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -198,7 +202,9 @@
 						"live-preview": false
 					},
 					"uid": 19,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -241,7 +247,9 @@
 						"live-preview": false
 					},
 					"uid": 20,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -284,7 +292,9 @@
 						"live-preview": false
 					},
 					"uid": 21,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -327,7 +337,9 @@
 						"live-preview": false
 					},
 					"uid": 25,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -370,7 +382,9 @@
 						"live-preview": false
 					},
 					"uid": 26,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -413,7 +427,9 @@
 						"live-preview": false
 					},
 					"uid": 29,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -456,7 +472,9 @@
 						"live-preview": false
 					},
 					"uid": 30,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -528,7 +546,9 @@
 						"live-preview": false
 					},
 					"uid": 17,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -571,7 +591,9 @@
 						"live-preview": false
 					},
 					"uid": 18,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -614,7 +636,9 @@
 						"live-preview": false
 					},
 					"uid": 23,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -657,7 +681,9 @@
 						"live-preview": false
 					},
 					"uid": 27,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -699,51 +725,10 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 28,
-					"instanceVariables": {},
-					"behaviors": {
-						"TileMovement": {
-							"properties": {
-								"grid-width": 128,
-								"grid-height": 128,
-								"grid-offset-x": 0,
-								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
-								"enabled": true,
-								"default-controls": false,
-								"isometric": false
-							}
-						}
-					},
-					"world": {
-						"x": 640,
-						"y": 640,
-						"width": 128,
-						"height": 128,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Berry",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 31,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -786,7 +771,9 @@
 						"live-preview": false
 					},
 					"uid": 32,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -828,51 +815,10 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 33,
-					"instanceVariables": {},
-					"behaviors": {
-						"TileMovement": {
-							"properties": {
-								"grid-width": 128,
-								"grid-height": 128,
-								"grid-offset-x": 0,
-								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
-								"enabled": true,
-								"default-controls": false,
-								"isometric": false
-							}
-						}
-					},
-					"world": {
-						"x": 256,
-						"y": 768,
-						"width": 128,
-						"height": 128,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Berry",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 34,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Preview": false
+					},
 					"behaviors": {
 						"TileMovement": {
 							"properties": {
@@ -1020,6 +966,96 @@
 						"height": 128,
 						"originX": 0,
 						"originY": -0.46875,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Wasp",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 22,
+					"instanceVariables": {
+						"Preview": false
+					},
+					"behaviors": {
+						"TileMovement": {
+							"properties": {
+								"grid-width": 128,
+								"grid-height": 128,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 200,
+								"speed-y": 200,
+								"enabled": true,
+								"default-controls": false,
+								"isometric": false
+							}
+						}
+					},
+					"world": {
+						"x": 256,
+						"y": 768,
+						"width": 128,
+						"height": 128,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Wasp",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 24,
+					"instanceVariables": {
+						"Preview": false
+					},
+					"behaviors": {
+						"TileMovement": {
+							"properties": {
+								"grid-width": 128,
+								"grid-height": 128,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 200,
+								"speed-y": 200,
+								"enabled": true,
+								"default-controls": false,
+								"isometric": false
+							}
+						}
+					},
+					"world": {
+						"x": 640,
+						"y": 640,
+						"width": 128,
+						"height": 128,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -2045,8 +2081,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 847,
-						"y": 35,
+						"x": 896,
+						"y": 128,
 						"width": 144,
 						"height": 211,
 						"originX": 0,

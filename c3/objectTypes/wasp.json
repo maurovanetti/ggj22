@@ -1,0 +1,57 @@
+{
+	"name": "Wasp",
+	"plugin-id": "Sprite",
+	"sid": 382100250899047,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 128,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5577559,
+						"collisionPoly": {
+							"points": [
+								0.20703125,
+								0.20703125,
+								0.5,
+								0.23828125,
+								0.73828125,
+								0.25390625,
+								0.66015625,
+								0.5,
+								0.72265625,
+								0.72265625,
+								0.5,
+								0.81640625,
+								0.22265625,
+								0.76953125,
+								0.28515625,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 883668659688592,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
