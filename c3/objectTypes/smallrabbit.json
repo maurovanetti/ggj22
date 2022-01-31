@@ -40,6 +40,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -72,6 +84,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -104,6 +128,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -136,6 +172,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -168,6 +216,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -200,6 +260,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -232,6 +304,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -264,6 +348,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -296,6 +392,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -328,6 +436,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -360,6 +480,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -392,6 +524,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -424,6 +568,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -456,6 +612,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -488,6 +656,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -520,6 +700,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -552,6 +744,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -584,6 +788,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -616,6 +832,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -648,6 +876,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -680,6 +920,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -712,6 +964,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -744,6 +1008,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -776,6 +1052,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -808,6 +1096,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -840,6 +1140,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -872,6 +1184,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -904,6 +1228,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -936,6 +1272,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -968,6 +1316,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1000,6 +1360,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1032,6 +1404,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1064,6 +1448,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1096,6 +1492,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1128,6 +1536,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1160,6 +1580,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -1203,6 +1635,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1235,6 +1679,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1259,6 +1715,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1291,6 +1759,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1323,6 +1803,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1355,6 +1847,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1387,6 +1891,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1415,6 +1931,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1439,6 +1967,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1463,6 +2003,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1495,6 +2047,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1527,6 +2091,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1559,6 +2135,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -1594,6 +2182,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1618,6 +2218,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1642,6 +2254,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1666,6 +2290,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1690,6 +2326,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1714,6 +2362,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1738,6 +2398,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1764,6 +2436,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1790,6 +2474,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1814,6 +2510,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1838,6 +2546,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1862,6 +2582,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1886,6 +2618,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1914,6 +2658,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1942,6 +2698,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1970,6 +2738,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -1998,6 +2778,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2026,6 +2818,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2050,6 +2854,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2074,6 +2890,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2098,6 +2926,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2122,6 +2962,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2146,6 +2998,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2170,6 +3034,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2194,6 +3070,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2220,6 +3108,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2244,6 +3144,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2268,6 +3180,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2292,6 +3216,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2316,6 +3252,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2340,6 +3288,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -2383,6 +3343,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2415,6 +3387,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2447,6 +3431,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2479,6 +3475,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2511,6 +3519,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2543,6 +3563,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2575,6 +3607,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2607,6 +3651,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2639,6 +3695,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2671,6 +3739,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2703,6 +3783,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2735,6 +3827,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2767,6 +3871,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2799,6 +3915,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2831,6 +3959,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2863,6 +4003,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2895,6 +4047,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2927,6 +4091,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2959,6 +4135,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -2991,6 +4179,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3023,6 +4223,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3055,6 +4267,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3087,6 +4311,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3119,6 +4355,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3151,6 +4399,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3183,6 +4443,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3215,6 +4487,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3247,6 +4531,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3279,6 +4575,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -3322,6 +4630,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3354,6 +4674,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3386,6 +4718,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3418,6 +4762,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3450,6 +4806,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3482,6 +4850,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -3525,6 +4905,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3557,6 +4949,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3589,6 +4993,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3621,6 +5037,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3653,6 +5081,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3685,6 +5125,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3717,6 +5169,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3749,6 +5213,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3781,6 +5257,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3813,6 +5301,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3845,6 +5345,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3877,6 +5389,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3909,6 +5433,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3941,6 +5477,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -3973,6 +5521,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4005,6 +5565,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4037,6 +5609,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4069,6 +5653,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4101,6 +5697,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4133,6 +5741,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4165,6 +5785,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4197,6 +5829,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4229,6 +5873,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4261,6 +5917,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4293,6 +5961,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4325,6 +6005,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4357,6 +6049,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4389,6 +6093,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					},
 					{
@@ -4421,6 +6137,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "QuestionMark",
+								"x": 0.8359375,
+								"y": 0.25
+							},
+							{
+								"name": "Damage",
+								"x": 0.4453125,
+								"y": 0.0078125
+							}
+						],
 						"duration": 1
 					}
 				],

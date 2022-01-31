@@ -3232,6 +3232,13 @@
 															],
 															"actions": [
 																{
+																	"callFunction": "Confused",
+																	"sid": 345567146677137,
+																	"parameters": [
+																		"Rabbit.UID"
+																	]
+																},
+																{
 																	"callFunction": "ResolveIn",
 																	"sid": 874817742515282,
 																	"parameters": [
@@ -3386,6 +3393,13 @@
 															],
 															"actions": [
 																{
+																	"callFunction": "Confused",
+																	"sid": 149980751935937,
+																	"parameters": [
+																		"Rabbit.UID"
+																	]
+																},
+																{
 																	"callFunction": "ResolveIn",
 																	"sid": 542212758583992,
 																	"parameters": [
@@ -3531,6 +3545,13 @@
 														}
 													],
 													"actions": [
+														{
+															"callFunction": "Confused",
+															"sid": 333168409723312,
+															"parameters": [
+																"Rabbit.UID"
+															]
+														},
 														{
 															"callFunction": "ResolveIn",
 															"sid": 367893793359873,
@@ -3680,6 +3701,13 @@
 																}
 															],
 															"actions": [
+																{
+																	"callFunction": "Confused",
+																	"sid": 180053349396832,
+																	"parameters": [
+																		"Rabbit.UID"
+																	]
+																},
 																{
 																	"callFunction": "ResolveIn",
 																	"sid": 826573251973798,
@@ -3831,6 +3859,13 @@
 															],
 															"actions": [
 																{
+																	"callFunction": "Confused",
+																	"sid": 172869290647664,
+																	"parameters": [
+																		"Rabbit.UID"
+																	]
+																},
+																{
 																	"callFunction": "ResolveIn",
 																	"sid": 435249493243591,
 																	"parameters": [
@@ -3976,6 +4011,13 @@
 														}
 													],
 													"actions": [
+														{
+															"callFunction": "Confused",
+															"sid": 869166334178527,
+															"parameters": [
+																"Rabbit.UID"
+															]
+														},
 														{
 															"callFunction": "ResolveIn",
 															"sid": 710704729242083,
@@ -4356,6 +4398,66 @@
 										}
 									],
 									"sid": 372010770991596
+								}
+							]
+						},
+						{
+							"functionName": "Confused",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [
+								{
+									"name": "ConfusedRabbitUID",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"sid": 947136629064741
+								}
+							],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 895405423394357,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "Rabbit",
+											"sid": 274904084482839,
+											"parameters": {
+												"unique-id": "ConfusedRabbitUID"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Rabbit",
+											"sid": 489084628194071,
+											"parameters": {
+												"object": "QuestionMark",
+												"layer": "\"Danger\"",
+												"image-point": "\"QuestionMark\"",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 119913839238071,
+											"parameters": {
+												"audio-file": "tud",
+												"loop": "not-looping",
+												"volume": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 993606726897827
 								}
 							]
 						}
@@ -5054,19 +5156,9 @@
 					"children": [
 						{
 							"eventType": "variable",
-							"name": "EndOfTurnDelay",
-							"type": "number",
-							"initialValue": "3",
-							"comment": "",
-							"isStatic": false,
-							"isConstant": true,
-							"sid": 708202053042592
-						},
-						{
-							"eventType": "variable",
 							"name": "EndOfGameDelay",
 							"type": "number",
-							"initialValue": "4",
+							"initialValue": "2",
 							"comment": "",
 							"isStatic": false,
 							"isConstant": true,
@@ -5144,6 +5236,15 @@
 							],
 							"actions": [
 								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 665516919117250,
+									"parameters": {
+										"variable": "Lives",
+										"value": "0"
+									}
+								},
+								{
 									"id": "set-group-active",
 									"objectClass": "System",
 									"sid": 779974586919761,
@@ -5153,9 +5254,19 @@
 									}
 								},
 								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 621049545527115,
+									"disabled": true,
+									"parameters": {
+										"seconds": "EndOfGameDelay"
+									}
+								},
+								{
 									"id": "go-to-layout",
 									"objectClass": "System",
 									"sid": 587958418612880,
+									"disabled": true,
 									"parameters": {
 										"layout": "GameOver"
 									}
@@ -5216,15 +5327,6 @@
 									"parameters": {
 										"group-name": "\"Resolution\"",
 										"state": "deactivated"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 203555273678923,
-									"disabled": true,
-									"parameters": {
-										"seconds": "EndOfTurnDelay"
 									}
 								},
 								{
@@ -5340,6 +5442,17 @@
 																"volume": "-5",
 																"tag-optional": "\"falling\""
 															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "SmallRabbit",
+															"sid": 385858883497263,
+															"parameters": {
+																"object": "Damage",
+																"layer": "\"Danger\"",
+																"image-point": "\"Damage\"",
+																"create-hierarchy": false
+															}
 														}
 													],
 													"sid": 691457724949053,
@@ -5397,6 +5510,17 @@
 																"loop": "not-looping",
 																"volume": "-5",
 																"tag-optional": "\"falling\""
+															}
+														},
+														{
+															"id": "spawn-another-object",
+															"objectClass": "BigRabbit",
+															"sid": 200381288889413,
+															"parameters": {
+																"object": "Damage",
+																"layer": "\"Danger\"",
+																"image-point": "\"Damage\"",
+																"create-hierarchy": false
 															}
 														}
 													],
@@ -5744,6 +5868,42 @@
 						}
 					],
 					"sid": 384452004975369
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-animation-finished",
+							"objectClass": "QuestionMark",
+							"sid": 941683208930423
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "QuestionMark",
+							"sid": 837571376212222
+						}
+					],
+					"sid": 544505382113545
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-animation-finished",
+							"objectClass": "Damage",
+							"sid": 577320253319420
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Damage",
+							"sid": 634005861752051
+						}
+					],
+					"sid": 413313791306916
 				},
 				{
 					"eventType": "block",

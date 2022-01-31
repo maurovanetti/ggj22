@@ -141,7 +141,8 @@
 			"gameover",
 			"TitleScreen",
 			"CoinOrder",
-			"QuestionMark"
+			"QuestionMark",
+			"Damage"
 		],
 		"subfolders": []
 	},
