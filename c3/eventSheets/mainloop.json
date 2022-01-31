@@ -1610,13 +1610,11 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-object-clicked",
-									"objectClass": "Mouse",
-									"sid": 644591851020207,
+									"id": "on-touched-object",
+									"objectClass": "Touch",
+									"sid": 652456840585780,
 									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked",
-										"object-clicked": "Token"
+										"object": "Token"
 									}
 								}
 							],
@@ -1673,12 +1671,9 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-button-released",
-									"objectClass": "Mouse",
-									"sid": 274272956827118,
-									"parameters": {
-										"mouse-button": "left"
-									}
+									"id": "on-any-touch-end",
+									"objectClass": "Touch",
+									"sid": 783016431991792
 								}
 							],
 							"actions": [
@@ -2170,10 +2165,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Token",
-									"sid": 644773072050303,
+									"sid": 283569642779822,
 									"parameters": {
-										"x": "Mouse.X",
-										"y": "Mouse.Y"
+										"x": "Touch.X",
+										"y": "Touch.Y"
 									}
 								},
 								{
@@ -2323,13 +2318,11 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-object-clicked",
-									"objectClass": "Mouse",
-									"sid": 627188539208780,
+									"id": "on-touched-object",
+									"objectClass": "Touch",
+									"sid": 207681760046104,
 									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked",
-										"object-clicked": "Go"
+										"object": "Go"
 									}
 								}
 							],

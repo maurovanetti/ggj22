@@ -91,13 +91,11 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 903022958092143,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 344049487247361,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "Log"
+						"object": "Log"
 					}
 				}
 			],
